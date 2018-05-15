@@ -144,14 +144,14 @@ namespace NetDataCollector
                             continue;
                         case PacketCommunicatorReceiveResult.Ok:
                             PacketBuffer.Enqueue((new CustomPacket(packet)).ToString());
-                            PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
+                            //PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
 
-                            //int randomNumber = rand.Next(1000);
+                            int randomNumber = rand.Next(1000);
 
-                            //if (randomNumber % 50 == 0)
-                            //{
-                            //    PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
-                            //}
+                            if (randomNumber % 50 == 0)
+                            {
+                                PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
+                            }
                             break;
                         default:
                             throw new InvalidOperationException("The result " + result + " should never be reached here");
