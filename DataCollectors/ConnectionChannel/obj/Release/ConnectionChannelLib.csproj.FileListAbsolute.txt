@@ -1,0 +1,4 @@
+E:\Диплом\Прога\DataCollectors\ConnectionChannel\bin\Release\ConnectionChannelLib.dll
+E:\Диплом\Прога\DataCollectors\ConnectionChannel\bin\Release\ConnectionChannelLib.pdb
+E:\Диплом\Прога\DataCollectors\ConnectionChannel\obj\Release\ConnectionChannelLib.dll
+E:\Диплом\Прога\DataCollectors\ConnectionChannel\obj\Release\ConnectionChannelLib.pdb

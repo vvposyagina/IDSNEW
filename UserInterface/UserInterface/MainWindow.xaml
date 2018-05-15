@@ -1,0 +1,123 @@
+<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="UserInterface.MainWindow"
+        Title="IDS Prototype" Height="800" Width="1000" FontFamily="Century Gothic" FontSize="16">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="tbAllPages" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto">
+            <TabItem x:Name="tiFirstPage" Header="Запуск">
+                <Grid Margin="0,0,0.333,-9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel x:Name="spMode" HorizontalAlignment="Left" Height="111" Margin="28,69,0,0" VerticalAlignment="Top" Width="335">
+                        <CheckBox x:Name="cbNet" Content="Сканирование сетевого трафика" Margin="0,0,0.333,0" Height="36" FontFamily="Century Gothic" Checked="cbNet_Checked" Unchecked="cbNet_Unchecked"/>
+                        <CheckBox x:Name="cbHost" Content="Сканнирование внутрисистемных процессов" Height="34" Margin="0,0,0.333,0" FontFamily="Century Gothic" Checked="cbHost_Checked" Unchecked="cbHost_Unchecked"/>
+                        <CheckBox x:Name="cbSaveToFile" Content="Сохранение перехваченных данных в файл" Height="34" FontFamily="Century Gothic" Checked="cbHost_Checked" Unchecked="cbHost_Unchecked" Width="334.667"/>
+                    </StackPanel>
+                    <Button x:Name="bAddFilter" Content="Настроить сканирование" HorizontalAlignment="Left" Margin="368,74,0,0" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.422,0.366" FontFamily="Century Gothic" FontWeight="Normal" BorderBrush="{x:Null}" IsEnabled="False" Click="bAddFilter_Click">
+                        <Button.Effect>
+                            <DropShadowEffect Color="#FFB5A8A8"/>
+                        </Button.Effect>
+                    </Button>
+                    <Label x:Name="lChooseMode" Content="Выберите области мониторинга" HorizontalAlignment="Left" Margin="18,20,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="bDefineLogSource" HorizontalAlignment="Left" Margin="373,115,0,0" VerticalAlignment="Top" Width="167" RenderTransformOrigin="0.422,0.366" FontFamily="Century Gothic" FontWeight="Normal" BorderBrush="{x:Null}" IsEnabled="False">
+                        <ListBoxItem Content="Выберите журналы" IsEnabled="False"/>
+                        <CheckBox x:Name="cbApplication" Content="Application" Checked="cbApplication_Checked" Unchecked="cbApplication_Unchecked"/>
+                        <CheckBox  x:Name="cbSystem" Content="System" Checked="cbSystem_Checked" Unchecked="cbSystem_Unchecked"/>
+                        <CheckBox x:Name="cbSecurity" Content="Security" Checked="cbSecurity_Checked" Unchecked="cbSecurity_Unchecked"/>
+                    </ComboBox>
+                    <Button x:Name="bPauseScanning" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.538,2" Height="39" BorderBrush="{x:Null}" Margin="28,197,0,0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/pause.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="bStartScanning" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.538,2" Height="39" OpacityMask="White" BorderBrush="{x:Null}" Click="bStartScanning_Click" Margin="93,197,0,0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/play.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="bStopScanning" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.538,2" Height="39" BorderBrush="{x:Null}" Click="bStopScanning_Click" Margin="152,197,0,0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/stop.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="10,20,10,480" RenderTransformOrigin="-0.11,0.39"/>
+                    <ListBox x:Name="lbInstantMessage"  Margin="10,307,532,77" ClipToBounds="True">
+                        <ListBox.Effect>
+                            <DropShadowEffect/>
+                        </ListBox.Effect>
+                    </ListBox>
+                    <TextBox x:Name="tbDetails" TextWrapping="Wrap" IsReadOnly="True" Margin="504,307,10,77"/>
+                    <Button x:Name="bSkip" Content="Пропустить" HorizontalAlignment="Left" Margin="504,677,0,0" VerticalAlignment="Top" Width="98" FontFamily="Century Gothic" FontWeight="Normal" IsEnabled="False" Click="bSkip_Click">
+                        <Button.Effect>
+                            <DropShadowEffect Color="#FF6D6464"/>
+                        </Button.Effect>
+                    </Button>
+                    <Button x:Name="bNotSkip" Content="Отметить как угрозу" HorizontalAlignment="Left" Margin="632,677,0,0" VerticalAlignment="Top" Width="152" FontFamily="Century Gothic" FontWeight="Normal" IsEnabled="False" Click="bNotSkip_Click">
+                        <Button.Effect>
+                            <DropShadowEffect Color="#FF6F6565"/>
+                        </Button.Effect>
+                    </Button>
+                    <Button x:Name="bSeeDetails" Content="Посмотреть детали" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="161" FontFamily="Century Gothic" FontWeight="Normal" Margin="10,0,0,29" Click="bSeeDetails_Click">
+                        <Button.Effect>
+                            <DropShadowEffect Color="#FF6D6464"/>
+                        </Button.Effect>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tbThirdPage" Header="Настройка нейросети">
+                <Grid Height="729" Width="993">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <DataGrid x:Name="dgNeuralNetworks" HorizontalAlignment="Left" Margin="22,75,0,0" VerticalAlignment="Top" Height="238" Width="943"/>
+                    <Label x:Name="lNN" Content="Сведения о различных конфигурациях нейросетей" HorizontalAlignment="Left" Margin="22,28,0,0" VerticalAlignment="Top"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="374" Margin="22,335,0,0" VerticalAlignment="Top" Width="943">
+                        <Label x:Name="lCreateNewNetwork" Content="Создать новую нейросеть..."/>
+                    </Border>
+                    <Button x:Name="bLoadTrainingSampling" Content="Загрузить обучающую выборку" Margin="51,377,720,323.333" FontWeight="Normal" FontFamily="Century Gothic" Click="nLoadTrainingSampling_Click"/>
+                    <Button x:Name="nLoadTestSampling" Content="Загрузить тестовую выборку" FontWeight="Normal" FontFamily="Century Gothic" Height="28.333" Width="222.333" Margin="51,423,720,278.333" Click="nLoadTestSampling_Click"/>
+                    <TextBox x:Name="tbEpochCount" Height="23" TextWrapping="Wrap" Width="120" Margin="799,377,74,326.333" RenderTransformOrigin="1.104,0.481" PreviewTextInput="checkValue_PreviewTextInput"/>
+                    <TextBox x:Name="tbNeuronCountInHiddenLayer" Height="23" TextWrapping="Wrap" Width="120" Margin="799,422,74,281.333" PreviewTextInput="checkValue_PreviewTextInput">
+                        <TextBox.Effect>
+                            <DropShadowEffect Color="#FF8C6F6F"/>
+                        </TextBox.Effect>
+                    </TextBox>
+                    <Label x:Name="lEpochCount" Content="Количество эпох" HorizontalAlignment="Left" Margin="684,377,0,0" VerticalAlignment="Top" FontSize="12"/>
+                    <Label x:Name="lCountNeuronsInHiddenLayer" Content="Количество нейронов скрытого слоя" Margin="566,422,194,275.333" FontSize="12"/>
+                    <Button x:Name="bTrain" Content="Обучить" FontWeight="Normal" FontFamily="Century Gothic" Width="222.333" Margin="51,525,720,176.333" Click="bTrain_Click">
+                        <Button.Effect>
+                            <DropShadowEffect Color="#FF837171"/>
+                        </Button.Effect>
+                    </Button>
+                    <ListBox x:Name="lbAboutNewNetwork" Margin="51,569,74,34.333">
+                        <ListBox.Effect>
+                            <DropShadowEffect Color="#FFC1B0B0"/>
+                        </ListBox.Effect>
+                    </ListBox>
+                    <Button x:Name="bSaveInFile" Content="Сохранить сеть" FontWeight="Normal" FontFamily="Century Gothic" Height="28.333" Margin="325,525,455,176.333" Click="bSaveInFile_Click"/>
+                    <Button x:Name="bUpdateNNData" Content="Обновить данные" Margin="497,28,334,672" FontWeight="Normal" FontFamily="Century Gothic" Click="bUpdateNNData_Click"/>
+                    <TextBox x:Name="tbTestFileName" Height="23" IsReadOnly="True" TextWrapping="Wrap" Margin="325,423,455,280.333"/>
+                    <TextBox x:Name="tbTrainingFileName" Height="23" IsReadOnly="True" TextWrapping="Wrap" Margin="325,377,455,326.333"/>
+                    <RadioButton x:Name="rbNetNN" Content="Сетевой трафик" Margin="51,465,737,240.333"/>
+                    <RadioButton x:Name="rbHostNN" Content="Анализ журнала событий" Margin="51,489,737,216.333"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tiSecondPage" Header="Анализ данных">
+                <Grid Margin="0,0,-0.667,0">
+                    <DataGrid x:Name="dgNetLog" HorizontalAlignment="Left" Margin="26,69,0,0" VerticalAlignment="Top" Height="246" Width="894"/>
+                    <Label x:Name="lDGNetLog" Content="Сведения о подозрительных сетевых соединениях" HorizontalAlignment="Left" Margin="26,28,0,0" VerticalAlignment="Top" Width="455"/>
+                    <Label x:Name="lDGHostLog" Content="Сведения о подозрительных внутрисистемных процессах" HorizontalAlignment="Left" VerticalAlignment="Top" Width="507" Margin="26,340,0,0"/>
+                    <DataGrid x:Name="dgHostLog" HorizontalAlignment="Left" VerticalAlignment="Top" Height="246" Width="908" Margin="26,390,0,0"/>
+                    <Button x:Name="bUpdateNetData" Content="Обновить данные" Margin="497,28,328.667,671.333" FontWeight="Normal" FontFamily="Century Gothic" Click="bUpdateNetData_Click"/>
+                    <Button x:Name="bUpdateHostData" Content="Обновить данные" Margin="538,340,288,359" FontWeight="Normal" FontFamily="Century Gothic" Click="bUpdateHostData_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Controls:MetroWindow>

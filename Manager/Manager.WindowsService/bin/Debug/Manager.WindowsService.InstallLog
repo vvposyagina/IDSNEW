@@ -1,0 +1,151 @@
+﻿Выполняется установка сборки 'E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Отсутствуют общие программы установки с атрибутом RunInstallerAttribute.Yes в сборке E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe.
+Выполняется фиксация сборки 'E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Отсутствуют общие программы установки с атрибутом RunInstallerAttribute.Yes в сборке E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe.
+Удалите файл InstallState, поскольку отсутствуют программы установки.
+Выполняется установка сборки 'E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Служба ManagerWindowsService успешно установлена.
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Диплом\Прога\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Выполняется установка сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Служба ManagerWindowsService успешно установлена.
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Выполняется удаление сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Выполняется удаление источника EventLog ManagerWindowsService.
+Выполняется удаление службы ManagerWindowsService из системы...
+Служба ManagerWindowsService успешно удалена из системы.
+Выполняется установка сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Служба ManagerWindowsService успешно установлена.
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Выполняется установка сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Служба ManagerWindowsService успешно установлена.
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Выполняется установка сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется откат для сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Восстанавливается исходное состояние журнала событий для источника ManagerWindowsService.
+Выполняется установка сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется откат для сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Восстанавливается исходное состояние журнала событий для источника ManagerWindowsService.
+Выполняется установка сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется откат для сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Восстанавливается исходное состояние журнала событий для источника ManagerWindowsService.
+Выполняется установка сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Служба ManagerWindowsService успешно установлена.
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Выполняется установка сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Служба ManagerWindowsService успешно установлена.
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Выполняется установка сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Устанавливается служба ManagerWindowsService...
+Служба ManagerWindowsService успешно установлена.
+Создается исходный EventLog ManagerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.InstallLog
+   assemblypath = E:\Прога\IDSW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe

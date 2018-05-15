@@ -1,0 +1,5 @@
+E:\Диплом\Прога\DataCollectors\HostDataCollector\bin\Release\HostDataCollector.exe.config
+E:\Диплом\Прога\DataCollectors\HostDataCollector\bin\Release\HostDataCollector.exe
+E:\Диплом\Прога\DataCollectors\HostDataCollector\bin\Release\HostDataCollector.pdb
+E:\Диплом\Прога\DataCollectors\HostDataCollector\obj\Release\HostDataCollector.exe
+E:\Диплом\Прога\DataCollectors\HostDataCollector\obj\Release\HostDataCollector.pdb

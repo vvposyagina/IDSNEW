@@ -1,0 +1,14 @@
+E:\Диплом\Прога\Manager\Manager.Contract\bin\Debug\Manager.Contract.dll
+E:\Диплом\Прога\Manager\Manager.Contract\bin\Debug\Manager.Contract.pdb
+E:\Диплом\Прога\Manager\Manager.Contract\obj\Debug\Manager.Contract.dll
+E:\Диплом\Прога\Manager\Manager.Contract\obj\Debug\Manager.Contract.pdb
+E:\Диплом\Прога\Manager\Manager.Contract\obj\Debug\Manager.Contract.csprojResolveAssemblyReference.cache
+C:\Users\zzadmin\Downloads\IDSML-master\IDSML-master\Manager\Manager.Contract\bin\Debug\Manager.Contract.dll
+C:\Users\zzadmin\Downloads\IDSML-master\IDSML-master\Manager\Manager.Contract\bin\Debug\Manager.Contract.pdb
+C:\Users\zzadmin\Downloads\IDSML-master\IDSML-master\Manager\Manager.Contract\obj\Debug\Manager.Contract.dll
+C:\Users\zzadmin\Downloads\IDSML-master\IDSML-master\Manager\Manager.Contract\obj\Debug\Manager.Contract.pdb
+E:\Прога\IDSW\Manager\Manager.Contract\bin\Debug\Manager.Contract.dll
+E:\Прога\IDSW\Manager\Manager.Contract\bin\Debug\Manager.Contract.pdb
+E:\Прога\IDSW\Manager\Manager.Contract\obj\Debug\Manager.Contract.dll
+E:\Прога\IDSW\Manager\Manager.Contract\obj\Debug\Manager.Contract.pdb
+E:\Прога\IDSW\Manager\Manager.Contract\obj\Debug\Manager.Contract.csprojResolveAssemblyReference.cache

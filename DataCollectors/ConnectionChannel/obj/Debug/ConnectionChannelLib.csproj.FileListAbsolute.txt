@@ -1,0 +1,5 @@
+E:\Диплом\Прога\DataCollectors\ConnectionChannel\bin\Debug\ConnectionChannelLib.dll
+E:\Диплом\Прога\DataCollectors\ConnectionChannel\bin\Debug\ConnectionChannelLib.pdb
+E:\Диплом\Прога\DataCollectors\ConnectionChannel\obj\Debug\ConnectionChannelLib.csprojResolveAssemblyReference.cache
+E:\Диплом\Прога\DataCollectors\ConnectionChannel\obj\Debug\ConnectionChannelLib.dll
+E:\Диплом\Прога\DataCollectors\ConnectionChannel\obj\Debug\ConnectionChannelLib.pdb

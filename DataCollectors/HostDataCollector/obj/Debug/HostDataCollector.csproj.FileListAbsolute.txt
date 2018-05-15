@@ -1,0 +1,6 @@
+E:\Диплом\Прога\DataCollectors\HostDataCollector\bin\Debug\HostDataCollector.exe.config
+E:\Диплом\Прога\DataCollectors\HostDataCollector\bin\Debug\HostDataCollector.exe
+E:\Диплом\Прога\DataCollectors\HostDataCollector\bin\Debug\HostDataCollector.pdb
+E:\Диплом\Прога\DataCollectors\HostDataCollector\obj\Debug\HostDataCollector.csprojResolveAssemblyReference.cache
+E:\Диплом\Прога\DataCollectors\HostDataCollector\obj\Debug\HostDataCollector.exe
+E:\Диплом\Прога\DataCollectors\HostDataCollector\obj\Debug\HostDataCollector.pdb

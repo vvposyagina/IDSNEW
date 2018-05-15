@@ -1,0 +1,12 @@
+E:\Диплом\Прога\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.exe.config
+E:\Диплом\Прога\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.exe
+E:\Диплом\Прога\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.pdb
+E:\Диплом\Прога\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.csprojResolveAssemblyReference.cache
+E:\Диплом\Прога\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.exe
+E:\Диплом\Прога\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.pdb
+C:\Users\zzadmin\Downloads\IDSML-master\IDSML-master\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.exe.config
+C:\Users\zzadmin\Downloads\IDSML-master\IDSML-master\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.exe
+C:\Users\zzadmin\Downloads\IDSML-master\IDSML-master\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.pdb
+E:\Прога\IDSW\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.exe.config
+E:\Прога\IDSW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.exe
+E:\Прога\IDSW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.pdb

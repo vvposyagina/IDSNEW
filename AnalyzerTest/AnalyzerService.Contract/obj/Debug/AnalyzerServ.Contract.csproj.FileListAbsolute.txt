@@ -1,0 +1,14 @@
+E:\Диплом\Прога\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.dll
+E:\Диплом\Прога\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.pdb
+E:\Диплом\Прога\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.dll
+E:\Диплом\Прога\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.pdb
+E:\Прога\IDSW\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.dll
+E:\Прога\IDSW\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.pdb
+E:\Прога\IDSW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.dll
+E:\Прога\IDSW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.pdb
+D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.dll
+D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.pdb
+D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.csprojResolveAssemblyReference.cache
+D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.csproj.CoreCompileInputs.cache
+D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.dll
+D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.pdb
