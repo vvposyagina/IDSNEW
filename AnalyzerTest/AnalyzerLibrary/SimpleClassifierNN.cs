@@ -48,6 +48,8 @@ namespace AnalyzerLibrary
 
         public SimpleClassifierNN(string fileName)
         {
+            string currDir = Environment.CurrentDirectory.ToString();
+
             Network = (ActivationNetwork)Accord.Neuro.Network.Load(fileName);
         }
 

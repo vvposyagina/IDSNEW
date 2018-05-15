@@ -21,5 +21,11 @@ namespace AnalyzerServ.Contract
 
         [OperationContract(IsInitiating = false, IsOneWay = true, IsTerminating = true)]
         void Stop();
+
+        [OperationContract(IsInitiating = false, IsOneWay = false, IsTerminating = false)]
+        double[] CreateNewNN(string trainingFileName, string testFileName, string goal, int epochCount, int neuronCountInHiddenLayer);
+
+        [OperationContract(IsInitiating = false, IsOneWay = true, IsTerminating = false)]
+        void ChangeNN();
     }
 }

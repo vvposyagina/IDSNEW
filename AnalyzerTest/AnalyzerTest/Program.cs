@@ -15,6 +15,7 @@ using Accord.Neuro.Learning;
 using System.Diagnostics;
 using System.ServiceModel;
 using AnalyzerLibrary;
+using System.IO;
 
 namespace AnalyzerTest
 {
@@ -22,34 +23,35 @@ namespace AnalyzerTest
     {
         static void Main(string[] args)
         {
-            //double[,] sampling = Utilities.ReadNetTrainingFile(@"E:\Диплом\Прога\AnalyzerTest\training.txt");
+            int ecount = 0, fcount = 0;
+            double[,] sampling = Utilities.ReadNetTrainingFile(@"training.txt", ref ecount, ref fcount);
 
-            //SimpleClassifierNN classifier = new SimpleClassifierNN(sampling, 36, 6000, 10, 1500);
-            //classifier.Train();
-            //classifier.SaveNetwork(@"E:\Диплом\Прога\AnalyzerTest\netSave.txt");
-            //int i =0;
-            //using (System.IO.StreamReader file = new System.IO.StreamReader(@"E:\Диплом\Прога\AnalyzerTest\test1.txt"))
-            //{
-            //    string line;
-            //    while ((line = file.ReadLine()) != null && line != "")
-            //    {
-            //        string[] allNetEntry = line.Split('|');
-            //        double[] input = Utilities.ParseToNetUnit(allNetEntry[4], ';');
-            //        string desc = "";
-            //        Console.WriteLine(String.Format("Result{0}: {1}", i, classifier.Classify(input).ToString()));
-            //        i++;
-            //    }
-            //}
+            SimpleClassifierNN classifier = new SimpleClassifierNN(sampling, 36, 6000, 10, 1500);
+            classifier.Train();
+            classifier.SaveNetwork(@"netSave.txt");
+            int i = 0;
+            using (System.IO.StreamReader file = new System.IO.StreamReader(@"test1.txt"))
+            {
+                string line;
+                while ((line = file.ReadLine()) != null && line != "")
+                {
+                    string[] allNetEntry = line.Split('|');
+                    double[] input = Utilities.ParseToNetUnit(allNetEntry[4], ';');
+                    string desc = "";
+                    Console.WriteLine(String.Format("Result{0}: {1}", i, classifier.Classify(input).ToString()));
+                    i++;
+                }
+            }
 
-            //string infile = @"E:\Диплом\Прога\AnalyzerTest\SecurityTraining.txt";
-            //string outfile = @"E:\Диплом\Прога\AnalyzerTest\logOutput.txt";
-            //string testfile = @"E:\Диплом\Прога\AnalyzerTest\logTest.txt";
-            //string saveFile = @"E:\Диплом\Прога\AnalyzerTest\logSave.txt";
+            string infile = @"SecurityTraining.txt";
+            string outfile = @"logOutput.txt";
+            string testfile = @"logTest.txt";
+            string saveFile = @"logSave.txt";
 
-            //LogClassifier logcl = new LogClassifier(saveFile, infile);
-            //string[] test = Utilities.ReadTestLogsFromFile(testfile);
-            //logcl.SaveClassifier(saveFile);
-            //CheckHostPackets(test, logcl);
+            LogClassifier logcl = new LogClassifier(saveFile, infile);
+            var test = Utilities.ReadHostClassifyFile(testfile);
+            logcl.SaveClassifier(saveFile);
+            CheckHostPackets(test[0], logcl);
         }
 
         public static void CheckHostPackets(string[] packets, LogClassifier lc)

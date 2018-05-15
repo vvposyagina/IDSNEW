@@ -30,3 +30,17 @@ E:\Прога\IDSW\Manager\Manager.DataAccess\bin\Debug\System.Data.SQLite.xml
 E:\Прога\IDSW\Manager\Manager.DataAccess\obj\Debug\Manager.DataAccess.dll
 E:\Прога\IDSW\Manager\Manager.DataAccess\obj\Debug\Manager.DataAccess.pdb
 E:\Прога\IDSW\Manager\Manager.DataAccess\obj\Debug\Manager.DataAccess.csprojResolveAssemblyReference.cache
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\Manager.DataAccess.dll.config
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\Manager.DataAccess.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\Manager.DataAccess.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\EntityFramework.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\System.Data.SQLite.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\System.Data.SQLite.EF6.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\System.Data.SQLite.Linq.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\EntityFramework.xml
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\System.Data.SQLite.xml
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\obj\Debug\Manager.DataAccess.csprojResolveAssemblyReference.cache
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\obj\Debug\Manager.DataAccess.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\obj\Debug\Manager.DataAccess.pdb

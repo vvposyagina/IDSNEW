@@ -14,7 +14,6 @@ namespace NetDataCollector
     public class NetCollector : Collector
     {        
         public const int PACKETS_COUNT_CONSTRAINT = 10;
-        object locker = new object();
         Random rand;
 
         public string Filter { get; set; }
@@ -23,7 +22,7 @@ namespace NetDataCollector
 
         public string DeviceAddress { get; set; }
 
-        public Queue<string> PacketBuffer { get; set; }
+        private Queue<string> PacketBuffer { get; set; }
 
         public bool SavingInFile { get; set; }
 
@@ -145,23 +144,28 @@ namespace NetDataCollector
                             continue;
                         case PacketCommunicatorReceiveResult.Ok:
                             PacketBuffer.Enqueue((new CustomPacket(packet)).ToString());
+                            PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
 
-                            int randomNumber = rand.Next(1000);
-                            if (randomNumber % 50 == 0)
-                            {
-                                PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(1, "0", rand, false));
-                            }
+                            //int randomNumber = rand.Next(1000);
+
+                            //if (randomNumber % 50 == 0)
+                            //{
+                            //    PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
+                            //}
                             break;
                         default:
-                            throw new InvalidOperationException("The result " + result + " shoudl never be reached here");
+                            throw new InvalidOperationException("The result " + result + " should never be reached here");
                     }
 
-                    if (PacketBuffer.Count == PACKETS_COUNT_CONSTRAINT)
+                    lock (PacketBuffer)
                     {
-                        string[] data = GetLastPackets();
+                        if (PacketBuffer.Count == PACKETS_COUNT_CONSTRAINT)
+                        {
+                            string[] data = GetLastPackets();
 
-                        if (queueIsFull != null)
-                            queueIsFull(data);
+                            if (queueIsFull != null)
+                                queueIsFull(data);
+                        }
                     }
 
                 } while (true);
@@ -171,17 +175,15 @@ namespace NetDataCollector
         public string[] GetLastPackets()
         {
             string[] result = new string[PACKETS_COUNT_CONSTRAINT];
-
-            lock (locker)
+            
+            int i = 0;
+            while(i < PACKETS_COUNT_CONSTRAINT)
             {
-                int i = 0;
-                while(i < PACKETS_COUNT_CONSTRAINT)
-                {
-                    string packet = PacketBuffer.Dequeue();
-                    result[i] = packet;
-                    i++;
-                }
+                string packet = PacketBuffer.Dequeue();
+                result[i] = packet;
+                i++;
             }
+            
             return result;
         }
     }

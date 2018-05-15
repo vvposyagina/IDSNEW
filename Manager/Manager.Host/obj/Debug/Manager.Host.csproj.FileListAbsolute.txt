@@ -89,3 +89,37 @@ E:\Прога\IDSW\Manager\Manager.Host\bin\Debug\System.Data.SQLite.xml
 E:\Прога\IDSW\Manager\Manager.Host\obj\Debug\Manager.Host.exe
 E:\Прога\IDSW\Manager\Manager.Host\obj\Debug\Manager.Host.pdb
 E:\Прога\IDSW\Manager\Manager.Host\bin\Debug\Manager.WindowsService.pdb
+E:\Диплом\новая версия\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.Host.exe.config
+E:\Диплом\новая версия\IDSNEW\Manager\Manager.Host\obj\Debug\Manager.Host.exe
+E:\Диплом\новая версия\IDSNEW\Manager\Manager.Host\obj\Debug\Manager.Host.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.Host.exe.config
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\obj\Debug\Manager.Host.exe
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\obj\Debug\Manager.Host.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\App.config
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.Host.exe
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.Host.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\HostDataCollector.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.Contract.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.DataAccess.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.WindowsService.exe
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\NetDataCollector.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Base.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Core.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Core.Extensions.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Packets.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\System.Data.SQLite.dll
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\HostDataCollector.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.Contract.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.DataAccess.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.WindowsService.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\NetDataCollector.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Base.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Base.xml
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Core.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Core.xml
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Core.Extensions.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Core.Extensions.xml
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Packets.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Packets.xml
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\System.Data.SQLite.xml
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\obj\Debug\Manager.Host.csprojResolveAssemblyReference.cache

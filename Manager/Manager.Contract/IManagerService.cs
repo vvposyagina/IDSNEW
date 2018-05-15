@@ -41,7 +41,7 @@ namespace Manager.Contract
         double[] RequestRetraining(string trainingFileName, string testFileName, string goal, int epochCount, int neuronCountInHiddenLayer);
 
         [OperationContract(IsInitiating = false, IsOneWay = true, IsTerminating = false)]
-        void UpdateNeuralNetwork(string goal);
+        void UpdateNeuralNetwork();
       
         [OperationContract(IsInitiating = false, IsTerminating = false)]
         string[][] GetNetData();        

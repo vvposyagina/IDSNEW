@@ -32,6 +32,7 @@ namespace UserInterface
         string trainingFileName;
         string testFileName;
         List<string> neuralNetworkData;
+        List<NNItem> ExistingNN;
         string goal = "";
 
         public MainWindow()
@@ -42,6 +43,7 @@ namespace UserInterface
             lbMessages = new List<string[]>();
             neuralNetworkData = new List<string>();
             goal = "";
+            ExistingNN = new List<NNItem>();
 
             try
             {
@@ -260,34 +262,34 @@ namespace UserInterface
 
         private void bUpdateNNData_Click(object sender, RoutedEventArgs e)
         {
-            dgNeuralNetworks.Items.Clear();
+            lvExistingNN.Items.Clear();
             string[][] bdresult = client.GetNNData();
             foreach (string[] newEntry in bdresult)
             {
-                dgNeuralNetworks.Items.Add(new NNItem(newEntry));
+                NNItem item = new NNItem(newEntry);
+                ExistingNN.Add(item);
+                lvExistingNN.Items.Add(item);
             }
         }
 
         private void bUpdateNetData_Click(object sender, RoutedEventArgs e)
         {
+            lvNetEntry.Items.Clear();
             string[][] bdresult = client.GetNetData();
             foreach (string[] newEntry in bdresult)
             {
-                dgNetLog.Items.Add(new NetItem(newEntry));
+                lvNetEntry.Items.Add(new NetItem(newEntry));
             }
         }
 
         private void bUpdateHostData_Click(object sender, RoutedEventArgs e)
         {
-            List<NetItem> items = new List<NetItem>();
-
+            lvHostEntry.Items.Clear();
             string[][] bdresult = client.GetHostData();
             foreach (string[] newEntry in bdresult)
             {
-                items.Add(new NetItem(newEntry));
+                lvHostEntry.Items.Add(new HostItem(newEntry));
             }
-
-            dgNetLog.ItemsSource = items;
         }
 
         private void nLoadTrainingSampling_Click(object sender, RoutedEventArgs e)

@@ -18,14 +18,12 @@ namespace AnalyzerService
         LogClassifier hostClassifier;
         SimpleClassifierNN temporaryNetClassifier;
         LogClassifier temporaryHostClassifier;
-        string networkFile = @"E:\Диплом\Прога\AnalyzerTest\netSave.txt";
-        string logClassifierFile = @"E:\Диплом\Прога\AnalyzerTest\logSave.txt";
-        string dictionaryFile = @"E:\Диплом\Прога\AnalyzerTest\SecurityTraining.txt";
+        string networkFile = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\netSave.txt";
+        string logClassifierFile = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\logSave.txt";
+        string dictionaryFile = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\SecurityTraining.txt";
         string temporaryGoal;
         Queue<string[]> netQueue;
         Queue<string[]> hostQueue;
-        object lockerNet = new object();
-        object lockerHost = new object();
         Thread ThreadForNetAnalyzing;
         Thread ThreadForHostAnalyzing;
 
@@ -36,28 +34,29 @@ namespace AnalyzerService
             temporaryGoal = "";
             netClassifier = new SimpleClassifierNN(networkFile);
             hostClassifier = new LogClassifier(logClassifierFile, dictionaryFile);
-            ThreadForNetAnalyzing = new Thread(NetAnalyze);
-            ThreadForHostAnalyzing = new Thread(HostAnalyze);
-            ThreadForHostAnalyzing.Start();
-            ThreadForNetAnalyzing.Start();
+            ThreadForNetAnalyzing = new Thread(new ParameterizedThreadStart(NetAnalyze));
+            ThreadForHostAnalyzing = new Thread(new ParameterizedThreadStart(HostAnalyze));
+            ThreadForHostAnalyzing.Start(OperationContext.Current);
+            ThreadForNetAnalyzing.Start(OperationContext.Current);
         }
 
         public void CheckNetPackets(string[] packets)
         {
-            lock(lockerNet)
+            lock (netQueue)
             {
                 netQueue.Enqueue(packets);
             }
         }
 
-        public void NetAnalyze()
+        private void NetAnalyze(object obj)
         {
+            OperationContext context = (OperationContext)obj;
             while(true)
             {
                 if(netQueue.Count > 0)
                 {
                     string[] packets;
-                    lock (lockerNet)
+                    lock (netQueue)
                     {
                         packets = netQueue.Dequeue();
                     }
@@ -67,28 +66,33 @@ namespace AnalyzerService
                         string[] packetInfoArray = packet.Split('|');
                         double[] input = Utilities.ParseToNetUnit(packetInfoArray[4], DELIMETER);
                         if (!netClassifier.Classify(input))
-                            OperationContext.Current.GetCallbackChannel<IAnalyzerCallback>().GenerateNetWarning(packetInfoArray);
+                            context.GetCallbackChannel<IAnalyzerCallback>().GenerateNetWarning(packetInfoArray);
                     }
+                }
+                else
+                {
+                    Thread.Sleep(5000);
                 }
             }
         }
 
         public void CheckHostPackets(string[] packets)
         {
-            lock (lockerHost)
+            lock (hostQueue)
             {
                 hostQueue.Enqueue(packets);
             }
         }
 
-        public void HostAnalyze()
+        private void HostAnalyze(object obj)
         {
+            OperationContext context = (OperationContext)obj;
             while (true)
             {
                 if (hostQueue.Count > 0)
                 {
                     string[] packets;
-                    lock (lockerHost)
+                    lock (hostQueue)
                     {
                         packets = hostQueue.Dequeue();
                     }
@@ -98,8 +102,12 @@ namespace AnalyzerService
                         LogEntry newEntry = new LogEntry(str, DELIMETER);
 
                         if (!hostClassifier.Analyze(newEntry))
-                            OperationContext.Current.GetCallbackChannel<IAnalyzerCallback>().GenerateHostWarning(newEntry.ToStringArray());
+                            context.GetCallbackChannel<IAnalyzerCallback>().GenerateHostWarning(newEntry.ToStringArray());
                     }
+                }
+                else
+                {
+                    Thread.Sleep(5000);
                 }
             }
         }
@@ -203,15 +211,20 @@ namespace AnalyzerService
         {
             if (netClassifier != null && temporaryGoal == "NET")
             {
-                ThreadForNetAnalyzing.Sleep(1000);
-                netClassifier = temporaryNetClassifier;
-                temporaryNetClassifier = null;
+                lock (netClassifier)
+                {
+                    netClassifier = temporaryNetClassifier;
+                    temporaryNetClassifier = null;
+                }
             }
 
             if (hostClassifier != null && temporaryGoal == "HOST")
             {
-                hostClassifier = temporaryHostClassifier;
-                temporaryHostClassifier = null;
+                lock (hostClassifier)
+                {
+                    hostClassifier = temporaryHostClassifier;
+                    temporaryHostClassifier = null;
+                }
             }
 
             OperationContext.Current.GetCallbackChannel<IAnalyzerCallback>().ResumeAnalyze();

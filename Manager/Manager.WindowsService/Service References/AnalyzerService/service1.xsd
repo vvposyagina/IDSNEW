@@ -25,17 +25,40 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="CreateNewNN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="trainingFileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="testFileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="goal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="epochCount" type="xs:int" />
+        <xs:element minOccurs="0" name="neuronCountInHiddenLayer" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNewNNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CreateNewNNResult" nillable="true" type="q3:ArrayOfdouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeNN">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GenerateNetWarning">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="data" nillable="true" type="q3:ArrayOfstring" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="data" nillable="true" type="q4:ArrayOfstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GenerateHostWarning">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="data" nillable="true" type="q4:ArrayOfstring" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="data" nillable="true" type="q5:ArrayOfstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -45,6 +68,11 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="SendOK">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeAnalyze">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

@@ -47,3 +47,28 @@ E:\Прога\IDSW\UserInterface\UserInterface\bin\Debug\ControlzEx.pdb
 E:\Прога\IDSW\UserInterface\UserInterface\bin\Debug\MahApps.Metro.pdb
 E:\Прога\IDSW\UserInterface\UserInterface\bin\Debug\MahApps.Metro.xml
 E:\Прога\IDSW\UserInterface\UserInterface\obj\Debug\UserInterface.pdb
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\bin\Debug\UserInterface.exe.config
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\UserInterface.exe
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\UserInterface.pdb
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\bin\Debug\UserInterface.exe
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\bin\Debug\UserInterface.pdb
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\bin\Debug\ControlzEx.dll
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\bin\Debug\MahApps.Metro.dll
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\bin\Debug\System.Windows.Interactivity.dll
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\bin\Debug\ControlzEx.pdb
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\bin\Debug\MahApps.Metro.pdb
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\bin\Debug\MahApps.Metro.xml
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\UserInterface.csprojResolveAssemblyReference.cache
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\MainWindow.baml
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\SourceWindow.baml
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\App.baml
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\MainWindow.g.cs
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\SourceWindow.g.cs
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\App.g.cs
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\UserInterface_MarkupCompile.cache
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\UserInterface.g.resources
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\UserInterface.Properties.Resources.resources
+E:\Диплом\новая версия\IDSNEW\UserInterface\UserInterface\obj\Debug\UserInterface.csproj.GenerateResource.Cache
+E:\Диплом\Новая\IDSNEW\UserInterface\UserInterface\bin\Debug\UserInterface.exe.config
+E:\Диплом\Новая\IDSNEW\UserInterface\UserInterface\obj\Debug\UserInterface.exe
+E:\Диплом\Новая\IDSNEW\UserInterface\UserInterface\obj\Debug\UserInterface.pdb

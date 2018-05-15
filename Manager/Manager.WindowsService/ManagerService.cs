@@ -19,16 +19,18 @@ namespace Manager.WindowsService
         Dictionary<string, NetCollector> netDataCollector;
         Dictionary<string, HostCollector> hostDataCollector;
         DBAccess dbaccess;
-        //string address = @"..\..\SuspiciousEvents.db";
-        string address = @"E:\Прога\IDSW\UserInterface\UserInterface\SuspiciousEvents.db";
+        string address = @"SuspiciousEvents.db";
+        ManagerCallback managercb;
+        //string address = @"E:\Прога\IDSW\UserInterface\UserInterface\SuspiciousEvents.db";
 
         AnalyzerService.AnalyzerClient client;
 
         public void Start()
         {
-            InstanceContext instanceContext = new InstanceContext(new ManagerCallback());
-            //client = new AnalyzerService.AnalyzerClient(instanceContext, "WSDualHttpBinding_IAnalyzer");
-            //client.StartService();
+            managercb = new ManagerCallback();
+            InstanceContext instanceContext = new InstanceContext(managercb);
+            client = new AnalyzerService.AnalyzerClient(instanceContext, "WSDualHttpBinding_IAnalyzer");
+            client.StartService();
             dbaccess = new DBAccess(address);
 
             netDataCollector = new Dictionary<string, NetCollector>();
@@ -97,12 +99,12 @@ namespace Manager.WindowsService
        
         private void SendNetPacketToAnalyzer(string[] data)
         {
-           // client.CheckNetPackets(data);
+           client.CheckNetPackets(data);
         }
 
         private void SendHostPacketToAnalyzer(string[] data)
         {
-            //client.CheckHostPackets(data);
+            client.CheckHostPackets(data);
         }
 
         public void StopNetDataCollector()
@@ -181,15 +183,14 @@ namespace Manager.WindowsService
 
         public double[] RequestRetraining(string trainingFileName, string testFileName, string goal, int epochCount, int neuronCountInHiddenLayer)
         {
-            return null;
-            //return client.CreateNewNN(trainingFileName, testFileName, goal, epochCount, neuronCountInHiddenLayer);
+            return client.CreateNewNN(trainingFileName, testFileName, goal, epochCount, neuronCountInHiddenLayer);
         }
 
-        public void UpdateNeuralNetwork(string goal)
+        public void UpdateNeuralNetwork()
         {
             PauseHostDataCollector();
             PauseNetDataCollector();
-            //client.ChangeNN(goal);
+            client.ChangeNN();
             RestartHostDataCollector();
             RestartNetDataCollector();
         }

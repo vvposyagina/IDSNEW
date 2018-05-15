@@ -77,3 +77,55 @@ D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService
 D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService.csproj.CoreCompileInputs.cache
 D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService.exe
 D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService.pdb
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\App.config
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.dll.config
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe.config
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.pdb
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerLibrary.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerServ.Contract.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.MachineLearning.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Neuro.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Math.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Statistics.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Math.Core.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Genetic.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerLibrary.pdb
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerServ.Contract.pdb
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.MachineLearning.xml
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Neuro.xml
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Math.xml
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Statistics.xml
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.xml
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Math.Core.xml
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Genetic.xml
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService.csprojResolveAssemblyReference.cache
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService.exe
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService.pdb
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerLibrary.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerServ.Contract.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.MachineLearning.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Neuro.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Math.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Statistics.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Math.Core.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Genetic.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerLibrary.pdb
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerServ.Contract.pdb
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.MachineLearning.xml
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Neuro.xml
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Math.xml
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Statistics.xml
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.xml
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Math.Core.xml
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.Genetic.xml
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService.csprojResolveAssemblyReference.cache
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService.exe
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\obj\Debug\AnalyzerService.pdb
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\App.config
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\Accord.dll.config
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe.config
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.pdb

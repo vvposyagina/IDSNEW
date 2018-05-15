@@ -12,3 +12,12 @@ D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\obj\Debug\Analyz
 D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.csproj.CoreCompileInputs.cache
 D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.dll
 D:\New folder\IDSW-master\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.pdb
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.pdb
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.dll
+E:\Диплом\новая версия\IDSNEW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.pdb
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.pdb
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.dll
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.pdb
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.csprojResolveAssemblyReference.cache

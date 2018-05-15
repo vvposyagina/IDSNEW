@@ -38,22 +38,37 @@ namespace Manager.Host.AnalyzerService {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsTerminating=true, IsInitiating=false, Action="http://tempuri.org/IAnalyzer/Stop")]
         System.Threading.Tasks.Task StopAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(IsInitiating=false, Action="http://tempuri.org/IAnalyzer/CreateNewNN", ReplyAction="http://tempuri.org/IAnalyzer/CreateNewNNResponse")]
+        double[] CreateNewNN(string trainingFileName, string testFileName, string goal, int epochCount, int neuronCountInHiddenLayer);
+        
+        [System.ServiceModel.OperationContractAttribute(IsInitiating=false, Action="http://tempuri.org/IAnalyzer/CreateNewNN", ReplyAction="http://tempuri.org/IAnalyzer/CreateNewNNResponse")]
+        System.Threading.Tasks.Task<double[]> CreateNewNNAsync(string trainingFileName, string testFileName, string goal, int epochCount, int neuronCountInHiddenLayer);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsInitiating=false, Action="http://tempuri.org/IAnalyzer/ChangeNN")]
+        void ChangeNN();
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsInitiating=false, Action="http://tempuri.org/IAnalyzer/ChangeNN")]
+        System.Threading.Tasks.Task ChangeNNAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IAnalyzerCallback {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAnalyzer/GenerateNetWarning")]
-        void GenerateNetWarning(string description);
+        void GenerateNetWarning(string[] data);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAnalyzer/GenerateHostWarning")]
-        void GenerateHostWarning(string description);
+        void GenerateHostWarning(string[] data);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAnalyzer/GoToArchiveMode")]
-        void GoToArchiveMode(string description);
+        void GoToArchiveMode();
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAnalyzer/SendOK")]
         void SendOK();
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAnalyzer/ResumeAnalyze")]
+        void ResumeAnalyze();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -114,6 +129,22 @@ namespace Manager.Host.AnalyzerService {
         
         public System.Threading.Tasks.Task StopAsync() {
             return base.Channel.StopAsync();
+        }
+        
+        public double[] CreateNewNN(string trainingFileName, string testFileName, string goal, int epochCount, int neuronCountInHiddenLayer) {
+            return base.Channel.CreateNewNN(trainingFileName, testFileName, goal, epochCount, neuronCountInHiddenLayer);
+        }
+        
+        public System.Threading.Tasks.Task<double[]> CreateNewNNAsync(string trainingFileName, string testFileName, string goal, int epochCount, int neuronCountInHiddenLayer) {
+            return base.Channel.CreateNewNNAsync(trainingFileName, testFileName, goal, epochCount, neuronCountInHiddenLayer);
+        }
+        
+        public void ChangeNN() {
+            base.Channel.ChangeNN();
+        }
+        
+        public System.Threading.Tasks.Task ChangeNNAsync() {
+            return base.Channel.ChangeNNAsync();
         }
     }
 }

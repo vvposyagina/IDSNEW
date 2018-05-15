@@ -12,7 +12,8 @@ namespace Manager.WindowsService
     {
         public void GenerateNetWarning(string[] data)
         {
-            OperationContext.Current.GetCallbackChannel<IManagerServiceCallback>().HandleNetWarning(data);
+            //OperationContext.Current.GetCallbackChannel<IManagerServiceCallback>().HandleNetWarning(data);
+            Console.WriteLine("Warning!");
         }
 
         public void GenerateHostWarning(string[] data)
@@ -27,8 +28,13 @@ namespace Manager.WindowsService
 
         public void SendOK()
         {
-            //OperationContext.Current.GetCallbackChannel<IManagerServiceCallback>().GetMessageOK();
-            Console.WriteLine("OK");
+            OperationContext.Current.GetCallbackChannel<IManagerServiceCallback>().GetMessageOK();
         }
+
+        public void ResumeAnalyze()
+        {
+            
+        }
+ 
     }
 }

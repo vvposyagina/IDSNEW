@@ -19,3 +19,10 @@ E:\Прога\IDSW\Manager\HostDataCollector\bin\Debug\Manager.Contract.pdb
 E:\Прога\IDSW\Manager\HostDataCollector\obj\Debug\HostDataCollector.csprojResolveAssemblyReference.cache
 E:\Прога\IDSW\Manager\HostDataCollector\obj\Debug\HostDataCollector.dll
 E:\Прога\IDSW\Manager\HostDataCollector\obj\Debug\HostDataCollector.pdb
+E:\Диплом\Новая\IDSNEW\Manager\HostDataCollector\bin\Debug\HostDataCollector.dll
+E:\Диплом\Новая\IDSNEW\Manager\HostDataCollector\bin\Debug\HostDataCollector.pdb
+E:\Диплом\Новая\IDSNEW\Manager\HostDataCollector\bin\Debug\Manager.Contract.dll
+E:\Диплом\Новая\IDSNEW\Manager\HostDataCollector\bin\Debug\Manager.Contract.pdb
+E:\Диплом\Новая\IDSNEW\Manager\HostDataCollector\obj\Debug\HostDataCollector.csprojResolveAssemblyReference.cache
+E:\Диплом\Новая\IDSNEW\Manager\HostDataCollector\obj\Debug\HostDataCollector.dll
+E:\Диплом\Новая\IDSNEW\Manager\HostDataCollector\obj\Debug\HostDataCollector.pdb

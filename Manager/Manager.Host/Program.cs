@@ -29,13 +29,20 @@ namespace Manager.Host
             //nc.Start();
 
             ManagerService ms = new ManagerService();
-            //InstanceContext instanceContext = new InstanceContext(new Callback());
-            //AnalyzerService.AnalyzerClient client = new AnalyzerService.AnalyzerClient(instanceContext, "WSDualHttpBinding_IAnalyzer");
-            //client.StartService();
+            Callback cl = new Callback();
+            InstanceContext instanceContext = new InstanceContext(cl);
+            
+            AnalyzerService.AnalyzerClient client = new AnalyzerService.AnalyzerClient(instanceContext, "WSDualHttpBinding_IAnalyzer");
+            client.StartService();
             ms.Start();
             //ms.StartCollectors(null, null, true, "", true);
+            string trpath = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\training.txt";
+            string testpath = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\test1.txt";
+            double[] result = client.CreateNewNN(trpath, testpath, "NET", 500, 15);
+            Console.WriteLine("Результат: " + result[0]);
+            client.ChangeNN();
             //string[][] data = ms.GetNetData();
-            ms.GetNNData();
+            //ms.GetNNData();
         }
     }
 }
