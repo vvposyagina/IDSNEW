@@ -201,7 +201,15 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 73 "..\..\MainWindow.xaml"
+        #line 71 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.CheckBox cbNotification;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 74 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TabItem tbThirdPage;
         
@@ -209,7 +217,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 78 "..\..\MainWindow.xaml"
+        #line 79 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lNN;
         
@@ -217,7 +225,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 80 "..\..\MainWindow.xaml"
+        #line 81 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lCreateNewNetwork;
         
@@ -225,7 +233,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 82 "..\..\MainWindow.xaml"
+        #line 83 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bLoadTrainingSampling;
         
@@ -233,7 +241,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 83 "..\..\MainWindow.xaml"
+        #line 84 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button nLoadTestSampling;
         
@@ -241,7 +249,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 84 "..\..\MainWindow.xaml"
+        #line 85 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox tbEpochCount;
         
@@ -249,7 +257,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 85 "..\..\MainWindow.xaml"
+        #line 86 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox tbNeuronCountInHiddenLayer;
         
@@ -257,7 +265,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 90 "..\..\MainWindow.xaml"
+        #line 91 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lEpochCount;
         
@@ -265,7 +273,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 91 "..\..\MainWindow.xaml"
+        #line 92 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lCountNeuronsInHiddenLayer;
         
@@ -273,7 +281,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 92 "..\..\MainWindow.xaml"
+        #line 93 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bTrain;
         
@@ -281,7 +289,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 97 "..\..\MainWindow.xaml"
+        #line 98 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox lbAboutNewNetwork;
         
@@ -289,7 +297,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 102 "..\..\MainWindow.xaml"
+        #line 103 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bSaveInFile;
         
@@ -297,7 +305,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 103 "..\..\MainWindow.xaml"
+        #line 104 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bUpdateNNData;
         
@@ -305,7 +313,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 104 "..\..\MainWindow.xaml"
+        #line 105 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox tbTestFileName;
         
@@ -313,7 +321,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 105 "..\..\MainWindow.xaml"
+        #line 106 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox tbTrainingFileName;
         
@@ -321,7 +329,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 106 "..\..\MainWindow.xaml"
+        #line 107 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.RadioButton rbNetNN;
         
@@ -329,7 +337,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 107 "..\..\MainWindow.xaml"
+        #line 108 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.RadioButton rbHostNN;
         
@@ -337,7 +345,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 108 "..\..\MainWindow.xaml"
+        #line 109 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListView lvExistingNN;
         
@@ -345,7 +353,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 127 "..\..\MainWindow.xaml"
+        #line 128 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TabItem tiSecondPage;
         
@@ -353,7 +361,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 129 "..\..\MainWindow.xaml"
+        #line 130 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lDGNetLog;
         
@@ -361,7 +369,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 130 "..\..\MainWindow.xaml"
+        #line 131 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label lDGHostLog;
         
@@ -369,7 +377,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 131 "..\..\MainWindow.xaml"
+        #line 132 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bUpdateNetData;
         
@@ -377,7 +385,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 132 "..\..\MainWindow.xaml"
+        #line 133 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button bUpdateHostData;
         
@@ -385,7 +393,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 133 "..\..\MainWindow.xaml"
+        #line 134 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListView lvNetEntry;
         
@@ -393,7 +401,7 @@ namespace UserInterface {
         #line hidden
         
         
-        #line 146 "..\..\MainWindow.xaml"
+        #line 147 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListView lvHostEntry;
         
@@ -605,132 +613,147 @@ namespace UserInterface {
             #line hidden
             return;
             case 21:
-            this.tbThirdPage = ((System.Windows.Controls.TabItem)(target));
+            this.cbNotification = ((System.Windows.Controls.CheckBox)(target));
+            
+            #line 71 "..\..\MainWindow.xaml"
+            this.cbNotification.Checked += new System.Windows.RoutedEventHandler(this.cbNotification_Checked);
+            
+            #line default
+            #line hidden
+            
+            #line 71 "..\..\MainWindow.xaml"
+            this.cbNotification.Unchecked += new System.Windows.RoutedEventHandler(this.cbNotification_Unchecked);
+            
+            #line default
+            #line hidden
             return;
             case 22:
-            this.lNN = ((System.Windows.Controls.Label)(target));
+            this.tbThirdPage = ((System.Windows.Controls.TabItem)(target));
             return;
             case 23:
-            this.lCreateNewNetwork = ((System.Windows.Controls.Label)(target));
+            this.lNN = ((System.Windows.Controls.Label)(target));
             return;
             case 24:
+            this.lCreateNewNetwork = ((System.Windows.Controls.Label)(target));
+            return;
+            case 25:
             this.bLoadTrainingSampling = ((System.Windows.Controls.Button)(target));
             
-            #line 82 "..\..\MainWindow.xaml"
+            #line 83 "..\..\MainWindow.xaml"
             this.bLoadTrainingSampling.Click += new System.Windows.RoutedEventHandler(this.nLoadTrainingSampling_Click);
             
             #line default
             #line hidden
             return;
-            case 25:
+            case 26:
             this.nLoadTestSampling = ((System.Windows.Controls.Button)(target));
             
-            #line 83 "..\..\MainWindow.xaml"
+            #line 84 "..\..\MainWindow.xaml"
             this.nLoadTestSampling.Click += new System.Windows.RoutedEventHandler(this.nLoadTestSampling_Click);
             
             #line default
             #line hidden
             return;
-            case 26:
+            case 27:
             this.tbEpochCount = ((System.Windows.Controls.TextBox)(target));
             
-            #line 84 "..\..\MainWindow.xaml"
+            #line 85 "..\..\MainWindow.xaml"
             this.tbEpochCount.PreviewTextInput += new System.Windows.Input.TextCompositionEventHandler(this.checkValue_PreviewTextInput);
             
             #line default
             #line hidden
             return;
-            case 27:
+            case 28:
             this.tbNeuronCountInHiddenLayer = ((System.Windows.Controls.TextBox)(target));
             
-            #line 85 "..\..\MainWindow.xaml"
+            #line 86 "..\..\MainWindow.xaml"
             this.tbNeuronCountInHiddenLayer.PreviewTextInput += new System.Windows.Input.TextCompositionEventHandler(this.checkValue_PreviewTextInput);
             
             #line default
             #line hidden
             return;
-            case 28:
+            case 29:
             this.lEpochCount = ((System.Windows.Controls.Label)(target));
             return;
-            case 29:
+            case 30:
             this.lCountNeuronsInHiddenLayer = ((System.Windows.Controls.Label)(target));
             return;
-            case 30:
+            case 31:
             this.bTrain = ((System.Windows.Controls.Button)(target));
             
-            #line 92 "..\..\MainWindow.xaml"
+            #line 93 "..\..\MainWindow.xaml"
             this.bTrain.Click += new System.Windows.RoutedEventHandler(this.bTrain_Click);
             
             #line default
             #line hidden
             return;
-            case 31:
+            case 32:
             this.lbAboutNewNetwork = ((System.Windows.Controls.ListBox)(target));
             return;
-            case 32:
+            case 33:
             this.bSaveInFile = ((System.Windows.Controls.Button)(target));
             
-            #line 102 "..\..\MainWindow.xaml"
+            #line 103 "..\..\MainWindow.xaml"
             this.bSaveInFile.Click += new System.Windows.RoutedEventHandler(this.bSaveInFile_Click);
             
             #line default
             #line hidden
             return;
-            case 33:
+            case 34:
             this.bUpdateNNData = ((System.Windows.Controls.Button)(target));
             
-            #line 103 "..\..\MainWindow.xaml"
+            #line 104 "..\..\MainWindow.xaml"
             this.bUpdateNNData.Click += new System.Windows.RoutedEventHandler(this.bUpdateNNData_Click);
             
             #line default
             #line hidden
             return;
-            case 34:
+            case 35:
             this.tbTestFileName = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 35:
+            case 36:
             this.tbTrainingFileName = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 36:
+            case 37:
             this.rbNetNN = ((System.Windows.Controls.RadioButton)(target));
             return;
-            case 37:
+            case 38:
             this.rbHostNN = ((System.Windows.Controls.RadioButton)(target));
             return;
-            case 38:
+            case 39:
             this.lvExistingNN = ((System.Windows.Controls.ListView)(target));
             return;
-            case 39:
+            case 40:
             this.tiSecondPage = ((System.Windows.Controls.TabItem)(target));
             return;
-            case 40:
+            case 41:
             this.lDGNetLog = ((System.Windows.Controls.Label)(target));
             return;
-            case 41:
+            case 42:
             this.lDGHostLog = ((System.Windows.Controls.Label)(target));
             return;
-            case 42:
+            case 43:
             this.bUpdateNetData = ((System.Windows.Controls.Button)(target));
             
-            #line 131 "..\..\MainWindow.xaml"
+            #line 132 "..\..\MainWindow.xaml"
             this.bUpdateNetData.Click += new System.Windows.RoutedEventHandler(this.bUpdateNetData_Click);
             
             #line default
             #line hidden
             return;
-            case 43:
+            case 44:
             this.bUpdateHostData = ((System.Windows.Controls.Button)(target));
             
-            #line 132 "..\..\MainWindow.xaml"
+            #line 133 "..\..\MainWindow.xaml"
             this.bUpdateHostData.Click += new System.Windows.RoutedEventHandler(this.bUpdateHostData_Click);
             
             #line default
             #line hidden
             return;
-            case 44:
+            case 45:
             this.lvNetEntry = ((System.Windows.Controls.ListView)(target));
             return;
-            case 45:
+            case 46:
             this.lvHostEntry = ((System.Windows.Controls.ListView)(target));
             return;
             }

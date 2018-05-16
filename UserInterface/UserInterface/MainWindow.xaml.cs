@@ -2,6 +2,7 @@ using MahApps.Metro.Controls;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -36,6 +38,8 @@ namespace UserInterface
         string goal = "";
         ClientCallback callback;
         bool pause;
+        bool notification;
+
 
         public MainWindow()
         {
@@ -50,6 +54,7 @@ namespace UserInterface
             goal = "";
             ExistingNN = new List<NNItem>();
             pause = false;
+            notification = false;
 
             try
             {
@@ -60,7 +65,7 @@ namespace UserInterface
             }
             catch
             {
-                MessageBox.Show("Не удалось подключиться к сервису");
+                System.Windows.MessageBox.Show("Не удалось подключиться к сервису");
             }
         }
 
@@ -115,7 +120,7 @@ namespace UserInterface
                     {
                         if (cbNet.IsChecked == true && Devices.Count == 0)
                         {
-                            MessageBox.Show("Выберите сетевые устройства");
+                            System.Windows.MessageBox.Show("Выберите сетевые устройства");
                         }
                         else
                         {
@@ -139,12 +144,12 @@ namespace UserInterface
                     }
                     else
                     {
-                        MessageBox.Show("Выберите журналы событий");
+                        System.Windows.MessageBox.Show("Выберите журналы событий");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Выберите области мониторинга");
+                    System.Windows.MessageBox.Show("Выберите области мониторинга");
                 }
             }
             else
@@ -207,6 +212,15 @@ namespace UserInterface
             strb.Append("Сетевая угроза");
             lbInstantMessage.Items.Add(strb);
             lbMessages.Add(message);
+
+            if (notification)
+            {
+                NotifyIcon warning = new NotifyIcon();
+                warning.Text = "Внимание! Обнаружена потенциальная угроза!";
+                warning.Icon = SystemIcons.Shield;
+                warning.Visible = true;
+                warning.ShowBalloonTip(50, "Внимание! Обнаружена потенциальная угроза!", "Подозрительная сетевая активность", ToolTipIcon.Warning);
+            }
         }
         public void HandleHostWarning(string[] message)
         {
@@ -215,6 +229,15 @@ namespace UserInterface
             strb.Append("Внутрисистемная угроза");
             lbInstantMessage.Items.Add(strb);
             lbMessages.Add(message);
+
+            if (notification)
+            {
+                NotifyIcon warning = new NotifyIcon();
+                warning.Text = "Внимание! Обнаружена потенциальная угроза!";
+                warning.Icon = SystemIcons.Shield;
+                warning.Visible = true;
+                warning.ShowBalloonTip(50, "Внимание! Обнаружена потенциальная угроза!", "Подозрительное поведение системы", ToolTipIcon.Warning);
+            }
         }
 
         public void GetMessageOFF()
@@ -237,7 +260,7 @@ namespace UserInterface
         {
             if (lbInstantMessage.SelectedIndex == -1)
             {
-                MessageBox.Show("Отсутствуют выбранные события");
+                System.Windows.MessageBox.Show("Отсутствуют выбранные события");
             }
             else if (lbInstantMessage.ItemStringFormat == "Нарушений не обнаружено" || lbInstantMessage.ItemStringFormat == "Система обнаружения вторжений выключена")
             {
@@ -247,12 +270,16 @@ namespace UserInterface
             else
             {
                 tbDetails.Text = "";
-                StringBuilder info = new StringBuilder("");
-                foreach (string str in lbMessages[lbInstantMessage.SelectedIndex])
+
+                if (lbInstantMessage.Items[lbInstantMessage.SelectedIndex].ToString().Contains("Сетевая"))
                 {
-                    info.AppendFormat("{0}\r\n", str);
+                   tbDetails.Text =  Utilities.GetNetReport(lbMessages[lbInstantMessage.SelectedIndex]);
                 }
-                tbDetails.Text = info.ToString();
+                else
+                {
+                    tbDetails.Text = Utilities.GetHostReport(lbMessages[lbInstantMessage.SelectedIndex]);
+                }
+                
                 bSkip.IsEnabled = true;
                 bNotSkip.IsEnabled = true;
             }
@@ -295,7 +322,7 @@ namespace UserInterface
                     client.AddNetData(entry.ToArray());
                     break;
                 default:
-                    MessageBox.Show("Сообщение содержит ошибки и не может быть добавлено в базу");
+                    System.Windows.MessageBox.Show("Сообщение содержит ошибки и не может быть добавлено в базу");
                     break;
             }
         }
@@ -334,7 +361,7 @@ namespace UserInterface
 
         private void nLoadTrainingSampling_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
             dlg.CheckFileExists = true;
             dlg.Filter = "Text documents (.txt)|*.txt";
             dlg.DefaultExt = ".txt";
@@ -350,7 +377,7 @@ namespace UserInterface
 
         private void nLoadTestSampling_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
             dlg.CheckFileExists = true;
             dlg.Filter = "Text documents (.txt)|*.txt";
             dlg.DefaultExt = ".txt";
@@ -380,7 +407,7 @@ namespace UserInterface
 
                         if (result == null)
                         {
-                            MessageBox.Show("На основании исходных данных нейросеть построить не удалось. Проверьте корректность обучающей и тестовой выборок");
+                            System.Windows.MessageBox.Show("На основании исходных данных нейросеть построить не удалось. Проверьте корректность обучающей и тестовой выборок");
                         }
                         else
                         {
@@ -389,17 +416,17 @@ namespace UserInterface
                     }
                     else
                     {
-                        MessageBox.Show("Выберите цель построения нейросети");
+                        System.Windows.MessageBox.Show("Выберите цель построения нейросети");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Введите данные для определения конфигурации сети");
+                    System.Windows.MessageBox.Show("Введите данные для определения конфигурации сети");
                 }
             }
             else
             {
-                MessageBox.Show("Загрузите файлы с обучающей и тестовой выборками");
+                System.Windows.MessageBox.Show("Загрузите файлы с обучающей и тестовой выборками");
             }
         }
 
@@ -454,6 +481,16 @@ namespace UserInterface
             bStartScanning.IsEnabled = true;
             client.Pause();
             pause = true;
+        }
+
+        private void cbNotification_Checked(object sender, RoutedEventArgs e)
+        {
+            notification = true;
+        }
+
+        private void cbNotification_Unchecked(object sender, RoutedEventArgs e)
+        {
+            notification = false;
         }
     }
 }

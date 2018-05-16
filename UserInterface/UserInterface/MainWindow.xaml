@@ -68,6 +68,7 @@
                             <DropShadowEffect Color="#FF6D6464"/>
                         </Button.Effect>
                     </Button>
+                    <CheckBox x:Name="cbNotification" Content="Включить уведомления" HorizontalAlignment="Left" Margin="254,197,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="14" Height="39" Checked="cbNotification_Checked" Unchecked="cbNotification_Unchecked"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tbThirdPage" Header="Настройка нейросети">

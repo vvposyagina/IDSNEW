@@ -43,3 +43,4 @@ E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\EntityFra
 E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\bin\Debug\System.Data.SQLite.xml
 E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\obj\Debug\Manager.DataAccess.dll
 E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\obj\Debug\Manager.DataAccess.pdb
+E:\Диплом\Новая\IDSNEW\Manager\Manager.DataAccess\obj\Debug\Manager.DataAccess.csprojResolveAssemblyReference.cache

@@ -10,3 +10,6 @@ C:\Users\zzadmin\Downloads\IDSML-master\IDSML-master\SamplingGenerator\SamplingG
 E:\Прога\IDSW\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.exe.config
 E:\Прога\IDSW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.exe
 E:\Прога\IDSW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.pdb
+E:\Диплом\Новая\IDSNEW\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.exe.config
+E:\Диплом\Новая\IDSNEW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.exe
+E:\Диплом\Новая\IDSNEW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.pdb
