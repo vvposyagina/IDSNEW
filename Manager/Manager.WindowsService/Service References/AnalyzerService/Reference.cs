@@ -64,9 +64,6 @@ namespace Manager.WindowsService.AnalyzerService {
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAnalyzer/GoToArchiveMode")]
         void GoToArchiveMode();
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAnalyzer/SendOK")]
-        void SendOK();
-        
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAnalyzer/ResumeAnalyze")]
         void ResumeAnalyze();
     }

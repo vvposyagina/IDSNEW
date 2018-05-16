@@ -27,8 +27,8 @@ namespace HostDataCollector
 
         public void Initialize(string source, bool savingfile)
         {
-            FileDirectory = "E:\\Диплом\\Прога\\Manager\\Manager.Host";
-            FileName = "testHost.txt";
+            FileDirectory = "E:\\Диплом\\Новая\\IDSNEW\\UserInterface\\UserInterface\\bin\\Debug";
+            FileName = "HostCollectorLog.txt";
             MessagesBuffer = new Queue<LogMessage>();
             Source = source;
             SavingInFile = savingfile;

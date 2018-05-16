@@ -111,7 +111,6 @@ E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\System.Data.SQL
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\HostDataCollector.pdb
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.Contract.pdb
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.DataAccess.pdb
-E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.WindowsService.pdb
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\NetDataCollector.pdb
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Base.pdb
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Base.xml
@@ -123,3 +122,4 @@ E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Pack
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\PcapDotNet.Packets.xml
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\System.Data.SQLite.xml
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\obj\Debug\Manager.Host.csprojResolveAssemblyReference.cache
+E:\Диплом\Новая\IDSNEW\Manager\Manager.Host\bin\Debug\Manager.WindowsService.pdb

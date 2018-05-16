@@ -19,15 +19,15 @@ namespace Manager.WindowsService
         Dictionary<string, NetCollector> netDataCollector;
         Dictionary<string, HostCollector> hostDataCollector;
         DBAccess dbaccess;
-        string address = @"SuspiciousEvents.db";
+        string address = @"E:\Диплом\Новая\IDSNEW\UserInterface\UserInterface\bin\Debug\SuspiciousEvents.db";
         ManagerCallback managercb;
-        //string address = @"E:\Прога\IDSW\UserInterface\UserInterface\SuspiciousEvents.db";
 
         AnalyzerService.AnalyzerClient client;
 
         public void Start()
         {
-            managercb = new ManagerCallback();
+            managercb = new ManagerCallback(OperationContext.Current);
+            managercb.resumeAnalyze += RestartCollectors;
             InstanceContext instanceContext = new InstanceContext(managercb);
             client = new AnalyzerService.AnalyzerClient(instanceContext, "WSDualHttpBinding_IAnalyzer");
             client.StartService();
@@ -211,6 +211,11 @@ namespace Manager.WindowsService
         }
 
         private void RestartNetDataCollector()
+        {
+
+        }
+
+        public void RestartCollectors()
         {
 
         }

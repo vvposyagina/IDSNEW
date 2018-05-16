@@ -16,10 +16,7 @@ namespace AnalyzerServ.Contract
         void GenerateHostWarning(string[] data);
 
         [OperationContract(IsOneWay = true)]
-        void GoToArchiveMode();
-
-        [OperationContract(IsOneWay = true)]
-        void SendOK();
+        void GoToArchiveMode();      
 
         [OperationContract(IsOneWay = true)]
         void ResumeAnalyze();

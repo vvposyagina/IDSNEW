@@ -26,12 +26,12 @@
                     </Button>
                     <Label x:Name="lChooseMode" Content="Выберите области мониторинга" HorizontalAlignment="Left" Margin="18,20,0,0" VerticalAlignment="Top"/>
                     <ComboBox x:Name="bDefineLogSource" HorizontalAlignment="Left" Margin="373,115,0,0" VerticalAlignment="Top" Width="167" RenderTransformOrigin="0.422,0.366" FontFamily="Century Gothic" FontWeight="Normal" BorderBrush="{x:Null}" IsEnabled="False">
-                        <ListBoxItem Content="Выберите журналы" IsEnabled="False"/>
+                        <ListBoxItem Content="Выберите журналы" IsEnabled="False" Foreground="#FF486921"/>
                         <CheckBox x:Name="cbApplication" Content="Application" Checked="cbApplication_Checked" Unchecked="cbApplication_Unchecked"/>
                         <CheckBox  x:Name="cbSystem" Content="System" Checked="cbSystem_Checked" Unchecked="cbSystem_Unchecked"/>
                         <CheckBox x:Name="cbSecurity" Content="Security" Checked="cbSecurity_Checked" Unchecked="cbSecurity_Unchecked"/>
                     </ComboBox>
-                    <Button x:Name="bPauseScanning" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.538,2" Height="39" BorderBrush="{x:Null}" Margin="28,197,0,0">
+                    <Button x:Name="bPauseScanning" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.538,2" Height="39" BorderBrush="{x:Null}" Margin="28,197,0,0" Click="bPauseScanning_Click" IsEnabled="False">
                         <Button.Background>
                             <ImageBrush ImageSource="Resources/pause.png"/>
                         </Button.Background>
@@ -41,7 +41,7 @@
                             <ImageBrush ImageSource="Resources/play.png"/>
                         </Button.Background>
                     </Button>
-                    <Button x:Name="bStopScanning" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.538,2" Height="39" BorderBrush="{x:Null}" Click="bStopScanning_Click" Margin="152,197,0,0">
+                    <Button x:Name="bStopScanning" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.538,2" Height="39" BorderBrush="{x:Null}" Click="bStopScanning_Click" Margin="152,197,0,0" IsEnabled="False">
                         <Button.Background>
                             <ImageBrush ImageSource="Resources/stop.png"/>
                         </Button.Background>

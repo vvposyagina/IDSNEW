@@ -1,0 +1,85 @@
+public static string[] ReadTestLogsFromFile(string fileName)
+        {
+            if (System.IO.File.Exists(fileName))
+            {
+                List<string> result = new List<string>();
+                using (System.IO.StreamReader file = new System.IO.StreamReader(fileName))
+                {
+                    string line;
+                    if ((line = file.ReadToEnd()) != null && line != "")
+                    {
+                        string[] allMessages = line.Split('@');
+                        result = new List<string>(allMessages);
+                        result.Remove("");
+                    }
+                }
+
+                return result.ToArray();
+            }
+            return null;
+        }
+
+        public static double[][] ReadLogsOutputsFromFile(string fileName)
+        {
+            if (System.IO.File.Exists(fileName))
+            {
+                List<double[]> outputs = new List<double[]>();
+
+                using (System.IO.StreamReader file = new System.IO.StreamReader(fileName))
+                {
+                    string line;
+                    while ((line = file.ReadLine()) != null && line != "")
+                    {
+                        List<double> oneRow = new List<double>();
+                        double temp = Convert.ToDouble(line);
+                        oneRow.Add(temp);
+                        outputs.Add(oneRow.ToArray());
+                    }
+                }
+
+                if (outputs.Count != 0)
+                    return outputs.ToArray();
+                else
+                    return null;
+            }
+            return null;
+        }
+
+        public static double[] ReadLogsOutputsSingleFromFile(string fileName)
+        {
+            if (System.IO.File.Exists(fileName))
+            {
+                List<double> outputs = new List<double>();
+
+                using (System.IO.StreamReader file = new System.IO.StreamReader(fileName))
+                {
+                    string line;
+                    while ((line = file.ReadLine()) != null && line != "")
+                    {
+                        double temp = Convert.ToDouble(line);
+                        outputs.Add(temp);
+                    }
+                }
+
+                if (outputs.Count != 0)
+                    return outputs.ToArray();
+                else
+                    return null;
+            }
+            return null;
+        }
+
+        public static bool[] DoubleOutputConvertToBool(double[] outputs)
+        {
+            List<bool> result = new List<bool>();
+
+            for (int i = 0; i < outputs.Count(); i++)
+            {
+                if (outputs[i] < 0.5)
+                    result.Add(false);
+                else
+                    result.Add(true);
+            }
+
+            return result.ToArray();
+        }

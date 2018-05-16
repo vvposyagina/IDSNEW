@@ -333,29 +333,6 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IAnalyzer_SendOK_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IAnalyzer_ResumeAnalyze_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -416,9 +393,6 @@
   <wsdl:message name="IAnalyzer_GoToArchiveMode_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:GoToArchiveMode" />
   </wsdl:message>
-  <wsdl:message name="IAnalyzer_SendOK_OutputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:SendOK" />
-  </wsdl:message>
   <wsdl:message name="IAnalyzer_ResumeAnalyze_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:ResumeAnalyze" />
   </wsdl:message>
@@ -450,9 +424,6 @@
     </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GoToArchiveMode">
       <wsdl:output wsaw:Action="http://tempuri.org/IAnalyzer/GoToArchiveMode" message="tns:IAnalyzer_GoToArchiveMode_OutputCallbackMessage" />
-    </wsdl:operation>
-    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SendOK">
-      <wsdl:output wsaw:Action="http://tempuri.org/IAnalyzer/SendOK" message="tns:IAnalyzer_SendOK_OutputCallbackMessage" />
     </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ResumeAnalyze">
       <wsdl:output wsaw:Action="http://tempuri.org/IAnalyzer/ResumeAnalyze" message="tns:IAnalyzer_ResumeAnalyze_OutputCallbackMessage" />
@@ -525,13 +496,6 @@
       <soap12:operation soapAction="http://tempuri.org/IAnalyzer/GoToArchiveMode" style="document" />
       <wsdl:output>
         <wsp:PolicyReference URI="#WSDualHttpBinding_IAnalyzer_GoToArchiveMode_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="SendOK">
-      <soap12:operation soapAction="http://tempuri.org/IAnalyzer/SendOK" style="document" />
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IAnalyzer_SendOK_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

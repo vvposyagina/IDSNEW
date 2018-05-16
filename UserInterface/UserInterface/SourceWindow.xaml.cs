@@ -22,12 +22,14 @@ namespace UserInterface
     {
         public string Filter { get; set; }
         public Dictionary<string, string> Devices { get; set; }
-        public string[] SelectedDevices { get; set; }
+        public List<string> SelectedDevices { get; set; }
 
         public SourceWindow(ManagerService.ManagerServiceClient client)
         {
             InitializeComponent();
             Devices = Utilities.ParseDevicesList(client.GetDevicesList());
+            SelectedDevices = new List<string>();
+            Filter = "";
 
             foreach(string key in Devices.Keys)
             {
@@ -62,25 +64,22 @@ namespace UserInterface
 
         private void bSaveFilter_Click(object sender, RoutedEventArgs e)
         {
-            List<string> listDevices = new List<string>();
-
             foreach(var item in lbDevices.Items)
             {
                 CheckBox cbItem = (CheckBox)item;
                 if(cbItem.IsChecked == true)
                 {
-                    listDevices.Add(Utilities.ParseDeviceTitle(cbItem.Content.ToString()));
+                    SelectedDevices.Add(Utilities.ParseDeviceTitle(cbItem.Content.ToString()));
                 }  
             }
 
-            if(listDevices.Count == 0)
+            if (SelectedDevices.Count == 0)
             {
                 MessageBox.Show("Выберите устройство");
             }
             else
             {
                 Filter = tbFilter.Text;
-                SelectedDevices = listDevices.ToArray();
                 this.DialogResult = true;
             }
         }

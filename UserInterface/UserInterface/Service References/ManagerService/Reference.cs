@@ -76,10 +76,10 @@ namespace UserInterface.ManagerService {
         System.Threading.Tasks.Task<double[]> RequestRetrainingAsync(string trainingFileName, string testFileName, string goal, int epochCount, int neuronCountInHiddenLayer);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsInitiating=false, Action="http://tempuri.org/IManagerService/UpdateNeuralNetwork")]
-        void UpdateNeuralNetwork(string goal);
+        void UpdateNeuralNetwork();
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsInitiating=false, Action="http://tempuri.org/IManagerService/UpdateNeuralNetwork")]
-        System.Threading.Tasks.Task UpdateNeuralNetworkAsync(string goal);
+        System.Threading.Tasks.Task UpdateNeuralNetworkAsync();
         
         [System.ServiceModel.OperationContractAttribute(IsInitiating=false, Action="http://tempuri.org/IManagerService/GetNetData", ReplyAction="http://tempuri.org/IManagerService/GetNetDataResponse")]
         string[][] GetNetData();
@@ -242,12 +242,12 @@ namespace UserInterface.ManagerService {
             return base.Channel.RequestRetrainingAsync(trainingFileName, testFileName, goal, epochCount, neuronCountInHiddenLayer);
         }
         
-        public void UpdateNeuralNetwork(string goal) {
-            base.Channel.UpdateNeuralNetwork(goal);
+        public void UpdateNeuralNetwork() {
+            base.Channel.UpdateNeuralNetwork();
         }
         
-        public System.Threading.Tasks.Task UpdateNeuralNetworkAsync(string goal) {
-            return base.Channel.UpdateNeuralNetworkAsync(goal);
+        public System.Threading.Tasks.Task UpdateNeuralNetworkAsync() {
+            return base.Channel.UpdateNeuralNetworkAsync();
         }
         
         public string[][] GetNetData() {

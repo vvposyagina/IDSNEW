@@ -1,0 +1,118 @@
+.NET Runtime;0;1026;(0);Приложение: Manager.WindowsService.exe
+Версия платформы: v4.0.30319
+Описание. Процесс был завершен из-за необработанного исключения.
+Сведения об исключении: System.IO.IOException
+   в System.IO.__Error.WinIOError(Int32, System.String)
+   в System.IO.FileStream.Init(System.String, System.IO.FileMode, System.IO.FileAccess, Int32, Boolean, System.IO.FileShare, Int32, System.IO.FileOptions, SECURITY_ATTRIBUTES, System.String, Boolean, Boolean, Boolean)
+   в System.IO.FileStream..ctor(System.String, System.IO.FileMode, System.IO.FileAccess, System.IO.FileShare, Int32, System.IO.FileOptions, System.String, Boolean, Boolean, Boolean)
+   в System.IO.StreamWriter.CreateFile(System.String, Boolean, Boolean)
+   в System.IO.StreamWriter..ctor(System.String, Boolean, System.Text.Encoding, Int32, Boolean)
+   в System.IO.StreamWriter..ctor(System.String, Boolean)
+   в System.IO.File.AppendText(System.String)
+   в Manager.Contract.Collector.SendBufferToFile(System.String[])
+   в Manager.Contract.Collector.SendBufferToFileAndManager(System.String[])
+   в NetDataCollector.NetCollector.StartCapturing()
+   в System.Threading.ThreadHelper.ThreadStart_Context(System.Object)
+   в System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   в System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   в System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+   в System.Threading.ThreadHelper.ThreadStart()
+
+;
+.NET Runtime;0;1026;(0);Приложение: Manager.WindowsService.exe
+Версия платформы: v4.0.30319
+Описание. Процесс был завершен из-за необработанного исключения.
+Сведения об исключении: System.IO.IOException
+   в System.IO.__Error.WinIOError(Int32, System.String)
+   в System.IO.FileStream.Init(System.String, System.IO.FileMode, System.IO.FileAccess, Int32, Boolean, System.IO.FileShare, Int32, System.IO.FileOptions, SECURITY_ATTRIBUTES, System.String, Boolean, Boolean, Boolean)
+   в System.IO.FileStream..ctor(System.String, System.IO.FileMode, System.IO.FileAccess, System.IO.FileShare, Int32, System.IO.FileOptions, System.String, Boolean, Boolean, Boolean)
+   в System.IO.StreamWriter.CreateFile(System.String, Boolean, Boolean)
+   в System.IO.StreamWriter..ctor(System.String, Boolean, System.Text.Encoding, Int32, Boolean)
+   в System.IO.StreamWriter..ctor(System.String, Boolean)
+   в System.IO.File.AppendText(System.String)
+   в Manager.Contract.Collector.SendBufferToFile(System.String[])
+   в Manager.Contract.Collector.SendBufferToFileAndManager(System.String[])
+   в NetDataCollector.NetCollector.StartCapturing()
+   в System.Threading.ThreadHelper.ThreadStart_Context(System.Object)
+   в System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   в System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   в System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+   в System.Threading.ThreadHelper.ThreadStart()
+
+;
+Application Error;0;1000;События сбоев приложения;Имя сбойного приложения: Manager.WindowsService.exe, версия: 1.0.0.0, метка времени: 0x5afbf521
+Имя сбойного модуля: KERNELBASE.dll, версия: 10.0.16299.402, метка времени: 0x81d25214
+Код исключения: 0xe0434352
+Смещение ошибки: 0x00103f12
+Идентификатор сбойного процесса: 0x3fac
+Время запуска сбойного приложения: 0x01d3ecf85c4e4d1e
+Путь сбойного приложения: E:\Диплом\Новая\IDSNEW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Путь сбойного модуля: C:\WINDOWS\System32\KERNELBASE.dll
+Идентификатор отчета: 192f89c2-5d0e-4abe-9827-da095ddd4580
+Полное имя сбойного пакета: 
+Код приложения, связанного со сбойным пакетом: ;
+Application Error;0;1000;События сбоев приложения;Имя сбойного приложения: Manager.WindowsService.exe, версия: 1.0.0.0, метка времени: 0x5afbf521
+Имя сбойного модуля: KERNELBASE.dll, версия: 10.0.16299.402, метка времени: 0x81d25214
+Код исключения: 0xe0434352
+Смещение ошибки: 0x00103f12
+Идентификатор сбойного процесса: 0x3fac
+Время запуска сбойного приложения: 0x01d3ecf85c4e4d1e
+Путь сбойного приложения: E:\Диплом\Новая\IDSNEW\Manager\Manager.WindowsService\bin\Debug\Manager.WindowsService.exe
+Путь сбойного модуля: C:\WINDOWS\System32\KERNELBASE.dll
+Идентификатор отчета: 192f89c2-5d0e-4abe-9827-da095ddd4580
+Полное имя сбойного пакета: 
+Код приложения, связанного со сбойным пакетом: ;
+.NET Runtime;0;1026;(0);Приложение: AnalyzerService.exe
+Версия платформы: v4.0.30319
+Описание. Процесс был завершен из-за необработанного исключения.
+Сведения об исключении: System.FormatException
+   в System.Number.StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+   в System.Number.ParseInt64(System.String, System.Globalization.NumberStyles, System.Globalization.NumberFormatInfo)
+   в System.Convert.ToInt64(System.String)
+   в AnalyzerLibrary.LogEntry..ctor(System.String, Char)
+   в AnalyzerService.Analyzer.HostAnalyze(System.Object)
+   в System.Threading.ThreadHelper.ThreadStart_Context(System.Object)
+   в System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   в System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   в System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+   в System.Threading.ThreadHelper.ThreadStart(System.Object)
+
+;
+.NET Runtime;0;1026;(0);Приложение: AnalyzerService.exe
+Версия платформы: v4.0.30319
+Описание. Процесс был завершен из-за необработанного исключения.
+Сведения об исключении: System.FormatException
+   в System.Number.StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+   в System.Number.ParseInt64(System.String, System.Globalization.NumberStyles, System.Globalization.NumberFormatInfo)
+   в System.Convert.ToInt64(System.String)
+   в AnalyzerLibrary.LogEntry..ctor(System.String, Char)
+   в AnalyzerService.Analyzer.HostAnalyze(System.Object)
+   в System.Threading.ThreadHelper.ThreadStart_Context(System.Object)
+   в System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   в System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean)
+   в System.Threading.ExecutionContext.Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
+   в System.Threading.ThreadHelper.ThreadStart(System.Object)
+
+;
+Application Error;0;1000;События сбоев приложения;Имя сбойного приложения: AnalyzerService.exe, версия: 1.0.0.0, метка времени: 0x5afbf4cf
+Имя сбойного модуля: KERNELBASE.dll, версия: 10.0.16299.402, метка времени: 0x81d25214
+Код исключения: 0xe0434352
+Смещение ошибки: 0x00103f12
+Идентификатор сбойного процесса: 0x3b70
+Время запуска сбойного приложения: 0x01d3ecf859429f6d
+Путь сбойного приложения: E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Путь сбойного модуля: C:\WINDOWS\System32\KERNELBASE.dll
+Идентификатор отчета: 40881fef-4b42-4c08-a713-dc1f10586854
+Полное имя сбойного пакета: 
+Код приложения, связанного со сбойным пакетом: ;
+Application Error;0;1000;События сбоев приложения;Имя сбойного приложения: AnalyzerService.exe, версия: 1.0.0.0, метка времени: 0x5afbf4cf
+Имя сбойного модуля: KERNELBASE.dll, версия: 10.0.16299.402, метка времени: 0x81d25214
+Код исключения: 0xe0434352
+Смещение ошибки: 0x00103f12
+Идентификатор сбойного процесса: 0x3b70
+Время запуска сбойного приложения: 0x01d3ecf859429f6d
+Путь сбойного приложения: E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Путь сбойного модуля: C:\WINDOWS\System32\KERNELBASE.dll
+Идентификатор отчета: 40881fef-4b42-4c08-a713-dc1f10586854
+Полное имя сбойного пакета: 
+Код приложения, связанного со сбойным пакетом: ;

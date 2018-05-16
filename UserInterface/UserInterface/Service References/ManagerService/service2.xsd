@@ -105,9 +105,7 @@
   </xs:element>
   <xs:element name="UpdateNeuralNetwork">
     <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="goal" nillable="true" type="xs:string" />
-      </xs:sequence>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
   <xs:element name="GetNetData">

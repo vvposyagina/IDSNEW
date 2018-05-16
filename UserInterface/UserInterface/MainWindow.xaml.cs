@@ -34,11 +34,15 @@ namespace UserInterface
         List<string> neuralNetworkData;
         List<NNItem> ExistingNN;
         string goal = "";
+        ClientCallback callback;
 
         public MainWindow()
         {
             InitializeComponent();
-            InstanceContext instanceContext = new InstanceContext(this);
+            callback = new ClientCallback();
+            callback.GetHostWarning += HandleHostWarning;
+            callback.GetNetWarning += HandleNetWarning;
+            InstanceContext instanceContext = new InstanceContext(callback);
             client = new ManagerService.ManagerServiceClient(instanceContext, "WSDualHttpBinding_IManagerService");
             lbMessages = new List<string[]>();
             neuralNetworkData = new List<string>();
@@ -65,6 +69,7 @@ namespace UserInterface
             if (swindow.ShowDialog() == true)
             {
                 Filter = swindow.Filter;
+                Devices = swindow.SelectedDevices;
             }
         }
 
@@ -94,6 +99,7 @@ namespace UserInterface
             if (swindow.ShowDialog() == true)
             {
                 Filter = swindow.Filter;
+                Devices = swindow.SelectedDevices;
             }
         }
 
@@ -101,20 +107,31 @@ namespace UserInterface
         {
             if (cbHost.IsChecked == true || cbNet.IsChecked == true)
             {
-                if (cbApplication.IsChecked == true || cbSystem.IsChecked == true || cbSecurity.IsChecked == true)
+                if ((cbHost.IsChecked == true && (cbApplication.IsChecked == true || cbSystem.IsChecked == true || cbSecurity.IsChecked == true)) || cbHost.IsChecked == false)
                 {
-                    cbHost.IsEnabled = false;
-                    cbNet.IsEnabled = false;
-                    bAddFilter.IsEnabled = false;
-                    bDefineLogSource.IsEnabled = false;
-                    string[] str = Sources.ToArray();
+                    if(cbNet.IsChecked == true && Devices.Count == 0)
+                    {
+                        MessageBox.Show("Выберите сетевые устройства");
+                    }
+                    else
+                    {
+                        cbHost.IsEnabled = false;
+                        cbNet.IsEnabled = false;
+                        cbSaveToFile.IsEnabled = false;
+                        bAddFilter.IsEnabled = false;
+                        bDefineLogSource.IsEnabled = false;
+                        string[] hostSources = Sources.ToArray();
+                        string[] netDevices = Devices.ToArray();
 
-                    bool mode = cbSaveToFile.IsChecked == true ? true : false;
-                    bool host = cbHost.IsChecked == true ? true : false;
-                    bool net = cbNet.IsChecked == true ? true : false;
+                        bool mode = cbSaveToFile.IsChecked == true ? true : false;
+                        bool host = cbHost.IsChecked == true ? true : false;
+                        bool net = cbNet.IsChecked == true ? true : false;
 
-
-                    //client.StartCollectors(null, str, net, Filter, host, mode);
+                        client.StartCollectors(netDevices, hostSources, net, Filter, host, mode);
+                        bStartScanning.IsEnabled = false;
+                        bStopScanning.IsEnabled = true;
+                        bPauseScanning.IsEnabled = true;
+                    }
                 }
                 else
                 {
@@ -131,6 +148,10 @@ namespace UserInterface
         {
             cbHost.IsEnabled = true;
             cbNet.IsEnabled = true;
+            cbSaveToFile.IsEnabled = true;
+            bStartScanning.IsEnabled = true;
+            bPauseScanning.IsEnabled = false;
+            bStopScanning.IsEnabled = false;
 
             if (cbHost.IsChecked == true)
                 bDefineLogSource.IsEnabled = true;
@@ -210,11 +231,18 @@ namespace UserInterface
             }
             else if (lbInstantMessage.ItemStringFormat == "Нарушений не обнаружено" || lbInstantMessage.ItemStringFormat == "Система обнаружения вторжений выключена")
             {
+
                 tbDetails.Text = lbInstantMessage.ItemStringFormat;
             }
             else
             {
-                tbDetails.Text = lbMessages[lbInstantMessage.SelectedIndex].ToString();
+                tbDetails.Text = "";
+                StringBuilder info = new StringBuilder("");
+                foreach (string str in lbMessages[lbInstantMessage.SelectedIndex])
+                {
+                    info.AppendFormat("{0}\r\n", str);
+                }
+                tbDetails.Text = info.ToString();
                 bSkip.IsEnabled = true;
                 bNotSkip.IsEnabled = true;
             }
@@ -222,6 +250,7 @@ namespace UserInterface
 
         private void bSkip_Click(object sender, RoutedEventArgs e)
         {
+            tbDetails.Text = "";
             bSkip.IsEnabled = false;
             bNotSkip.IsEnabled = false;
             int num = lbInstantMessage.SelectedIndex;
@@ -234,6 +263,7 @@ namespace UserInterface
 
         private void bNotSkip_Click(object sender, RoutedEventArgs e)
         {
+            tbDetails.Text = "";
             bSkip.IsEnabled = false;
             bNotSkip.IsEnabled = false;
             int num = lbInstantMessage.SelectedIndex;
@@ -248,10 +278,10 @@ namespace UserInterface
         {
             switch (entry.Count)
             {
-                case 6:
+                case 5:
                     client.AddHostData(entry.ToArray());
                     break;
-                case 7:
+                case 6:
                     client.AddNetData(entry.ToArray());
                     break;
                 default:
@@ -389,10 +419,16 @@ namespace UserInterface
 
         private void bSaveInFile_Click(object sender, RoutedEventArgs e)
         {
-            client.UpdateNeuralNetwork(goal);
+            client.UpdateNeuralNetwork();
             goal = "";
             testFileName = "";
             trainingFileName = "";
+        }
+
+        private void bPauseScanning_Click(object sender, RoutedEventArgs e)
+        {
+            bPauseScanning.IsEnabled = false;
+            bStartScanning.IsEnabled = true;
         }
     }
 }

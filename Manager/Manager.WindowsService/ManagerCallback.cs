@@ -10,30 +10,34 @@ namespace Manager.WindowsService
 {
     public class ManagerCallback : AnalyzerService.IAnalyzerCallback
     {
+        public delegate void ManagerReact();
+        public OperationContext currentContext;
+        public event ManagerReact resumeAnalyze;
+
+        public ManagerCallback(OperationContext context)
+        {
+            currentContext = context;
+            resumeAnalyze = null;
+        }
         public void GenerateNetWarning(string[] data)
         {
-            OperationContext.Current.GetCallbackChannel<IManagerServiceCallback>().HandleNetWarning(data);
-            //Console.WriteLine("Warning!");
+            currentContext.GetCallbackChannel<IManagerServiceCallback>().HandleNetWarning(data);
         }
 
         public void GenerateHostWarning(string[] data)
         {
-            OperationContext.Current.GetCallbackChannel<IManagerServiceCallback>().HandleHostWarning(data);
+            currentContext.GetCallbackChannel<IManagerServiceCallback>().HandleHostWarning(data);
         }
 
         public void GoToArchiveMode()
         {
-            OperationContext.Current.GetCallbackChannel<IManagerServiceCallback>().GetMessageOFF();
-        }
-
-        public void SendOK()
-        {
-            OperationContext.Current.GetCallbackChannel<IManagerServiceCallback>().GetMessageOK();
+            currentContext.GetCallbackChannel<IManagerServiceCallback>().GetMessageOFF();
         }
 
         public void ResumeAnalyze()
         {
-            
+            if (resumeAnalyze != null)
+                resumeAnalyze();
         }
     }
 }
