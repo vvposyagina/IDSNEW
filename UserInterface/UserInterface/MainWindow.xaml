@@ -104,8 +104,8 @@
                     <Button x:Name="bUpdateNNData" Content="Обновить данные" Margin="497,28,334,672" FontWeight="Normal" FontFamily="Century Gothic" Click="bUpdateNNData_Click"/>
                     <TextBox x:Name="tbTestFileName" Height="23" IsReadOnly="True" TextWrapping="Wrap" Margin="325,423,455,280.333"/>
                     <TextBox x:Name="tbTrainingFileName" Height="23" IsReadOnly="True" TextWrapping="Wrap" Margin="325,377,455,326.333"/>
-                    <RadioButton x:Name="rbNetNN" Content="Сетевой трафик" Margin="51,465,737,240.333"/>
-                    <RadioButton x:Name="rbHostNN" Content="Анализ журнала событий" Margin="51,489,737,216.333"/>
+                    <RadioButton x:Name="rbNetNN" Content="Сетевой трафик" Margin="51,465,737,240.333" FontFamily="Century Gothic" FontSize="14"/>
+                    <RadioButton x:Name="rbHostNN" Content="Анализ журнала событий" Margin="51,489,737,216.333" FontFamily="Century Gothic" FontSize="14"/>
                     <ListView x:Name="lvExistingNN" HorizontalAlignment="Left" Height="198" Margin="22,98,0,0" VerticalAlignment="Top" Width="943">
                         <ListView.View>
                             <GridView>
