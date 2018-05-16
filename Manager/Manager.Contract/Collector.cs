@@ -22,6 +22,8 @@ namespace Manager.Contract
 
         public event ProccesBufffer sendToManager;
 
+        protected bool Pause {get; set;}
+
         protected void SendBufferToFile(string[] data)
         {
             DirectoryInfo directory = new DirectoryInfo(FileDirectory);
@@ -45,6 +47,16 @@ namespace Manager.Contract
         {
             SendBufferToManager(data);
             SendBufferToFile(data);
+        }
+
+        public void SetPause()
+        {
+            Pause = true;
+        }
+
+        public void ResetPause()
+        {
+            Pause = false;
         }
     }
 }

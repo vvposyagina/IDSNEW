@@ -3,6 +3,7 @@ using Manager.WindowsService;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -36,8 +37,8 @@ namespace Manager.Host
             client.StartService();
             ms.Start();
             //ms.StartCollectors(null, null, true, "", true);
-            string trpath = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\training.txt";
-            string testpath = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\test1.txt";
+            string trpath = @"E:\Диплом\WorkingDirectory\\training.txt";
+            string testpath = @"E:\Диплом\WorkingDirectory\test1.txt"; 
             double[] result = client.CreateNewNN(trpath, testpath, "NET", 500, 15);
             Console.WriteLine("Результат: " + result[0]);
             client.ChangeNN();

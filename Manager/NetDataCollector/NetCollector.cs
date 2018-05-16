@@ -13,7 +13,7 @@ namespace NetDataCollector
 {
     public class NetCollector : Collector
     {        
-        public const int PACKETS_COUNT_CONSTRAINT = 10;
+        public const int PACKETS_COUNT_CONSTRAINT = 50;
         Random rand;
 
         public string Filter { get; set; }
@@ -31,7 +31,8 @@ namespace NetDataCollector
 
         private void Initialize(string filter, bool savingfile)
         {
-            FileDirectory = "E:\\Диплом\\Новая\\IDSNEW\\UserInterface\\UserInterface\\bin\\Debug";
+            Pause = false;
+            FileDirectory = "E:\\Диплом\\WorkingDirectory";
             FileName = "NetCollectorLog.txt";
             DeviceAddress = CurrentDevice.Addresses[1].Address.ToString();
             DeviceAddress = DeviceAddress.Replace("Internet ", "");
@@ -144,14 +145,14 @@ namespace NetDataCollector
                             continue;
                         case PacketCommunicatorReceiveResult.Ok:
                             PacketBuffer.Enqueue((new CustomPacket(packet)).ToString());
-                            PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
+                            //PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
 
-                            //int randomNumber = rand.Next(1000);
+                            int randomNumber = rand.Next(1000);
 
-                            //if (randomNumber % 50 == 0)
-                            //{
-                            //    PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
-                            //}
+                            if (randomNumber % 50 == 0)
+                            {
+                                PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
+                            }
                             break;
                         default:
                             throw new InvalidOperationException("The result " + result + " should never be reached here");
@@ -159,7 +160,7 @@ namespace NetDataCollector
 
                     lock (PacketBuffer)
                     {
-                        if (PacketBuffer.Count == PACKETS_COUNT_CONSTRAINT)
+                        if (PacketBuffer.Count >= PACKETS_COUNT_CONSTRAINT && !Pause)
                         {
                             string[] data = GetLastPackets();
 

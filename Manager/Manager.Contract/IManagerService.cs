@@ -20,7 +20,7 @@ namespace Manager.Contract
         void Stop();
 
         [OperationContract(IsInitiating = false, IsOneWay = true, IsTerminating = false)]
-        void Pause(List<string> nCollectors, List<string> hCollectors);
+        void Pause();
 
         [OperationContract(IsInitiating = false, IsOneWay = true, IsTerminating = false)]
         void StartNetDataCollector(string[] devicesNames, string filter, bool mode);

@@ -13,8 +13,7 @@ namespace HostDataCollector
     public class HostCollector : Collector
     {
         public const int PACKETS_COUNT_CONSTRAINT = 1;
-        object locker = new object();
-
+        object locker = new object();        
         EventLog sourceLog;
 
         public string Source { get; set; }
@@ -27,7 +26,8 @@ namespace HostDataCollector
 
         public void Initialize(string source, bool savingfile)
         {
-            FileDirectory = "E:\\Диплом\\Новая\\IDSNEW\\UserInterface\\UserInterface\\bin\\Debug";
+            Pause = false;
+            FileDirectory = "E:\\Диплом\\WorkingDirectory";
             FileName = "HostCollectorLog.txt";
             MessagesBuffer = new Queue<LogMessage>();
             Source = source;
@@ -69,7 +69,7 @@ namespace HostDataCollector
             LogMessage newMessage = new LogMessage(e.Entry);
             MessagesBuffer.Enqueue(newMessage);
 
-            if(MessagesBuffer.Count == PACKETS_COUNT_CONSTRAINT)
+            if(MessagesBuffer.Count >= PACKETS_COUNT_CONSTRAINT && !Pause)
             {
                 string[] data = GetLastPackets();
                 if (queueIsFull != null)

@@ -24,13 +24,13 @@ namespace AnalyzerTest
         static void Main(string[] args)
         {
             int ecount = 0, fcount = 0;
-            double[,] sampling = Utilities.ReadNetTrainingFile(@"training.txt", ref ecount, ref fcount);
+            double[,] sampling = Utilities.ReadNetTrainingFile(@"E:\Диплом\WorkingDirectory\training.txt", ref ecount, ref fcount);
 
             SimpleClassifierNN classifier = new SimpleClassifierNN(sampling, 36, 6000, 10, 1500);
             classifier.Train();
-            classifier.SaveNetwork(@"netSave.txt");
+            classifier.SaveNetwork(String.Format(@"E:\Диплом\WorkingDirectory\netSave.txt", Directory.GetCurrentDirectory()));
             int i = 0;
-            using (System.IO.StreamReader file = new System.IO.StreamReader(@"test1.txt"))
+            using (System.IO.StreamReader file = new System.IO.StreamReader(@"E:\Диплом\WorkingDirectory\test1.txt"))
             {
                 string line;
                 while ((line = file.ReadLine()) != null && line != "")
@@ -43,10 +43,10 @@ namespace AnalyzerTest
                 }
             }
 
-            string infile = @"SecurityTraining.txt";
-            string outfile = @"logOutput.txt";
-            string testfile = @"logTest.txt";
-            string saveFile = @"logSave.txt";
+            string infile = @"E:\Диплом\WorkingDirectory\SecurityTraining.txt";
+            string outfile = @"E:\Диплом\WorkingDirectory\logOutput.txt";
+            string testfile = @"E:\Диплом\WorkingDirectory\logTest.txt";
+            string saveFile = @"E:\Диплом\WorkingDirectory\logSave.txt";
 
             LogClassifier logcl = new LogClassifier(saveFile, infile);
             var test = Utilities.ReadHostClassifyFile(testfile);

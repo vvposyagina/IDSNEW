@@ -66,6 +66,11 @@ namespace AnalyzerLibrary
 
         public Tuple<double, TimeSpan> Train()
         {
+            if(SourceMatrix == null)
+            {
+                return null;
+            }
+
             List<int> listColumns = new List<int>();
             for (int i = 0; i < FeaturesAmount; i++)
                 listColumns.Add(i);

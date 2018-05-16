@@ -52,7 +52,7 @@
                             <DropShadowEffect/>
                         </ListBox.Effect>
                     </ListBox>
-                    <TextBox x:Name="tbDetails" TextWrapping="Wrap" IsReadOnly="True" Margin="504,307,10,77"/>
+                    <TextBox x:Name="tbDetails" TextWrapping="Wrap" IsReadOnly="True" Margin="504,307,10,77" FontFamily="Century Gothic" FontSize="14"/>
                     <Button x:Name="bSkip" Content="Пропустить" HorizontalAlignment="Left" Margin="504,677,0,0" VerticalAlignment="Top" Width="98" FontFamily="Century Gothic" FontWeight="Normal" IsEnabled="False" Click="bSkip_Click">
                         <Button.Effect>
                             <DropShadowEffect Color="#FF6D6464"/>

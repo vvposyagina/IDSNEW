@@ -5,6 +5,7 @@ using NetDataCollector;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -19,8 +20,9 @@ namespace Manager.WindowsService
         Dictionary<string, NetCollector> netDataCollector;
         Dictionary<string, HostCollector> hostDataCollector;
         DBAccess dbaccess;
-        string address = @"E:\Диплом\Новая\IDSNEW\UserInterface\UserInterface\bin\Debug\SuspiciousEvents.db";
+        string address = @"E:\Диплом\WorkingDirectory\SuspiciousEvents.db"; 
         ManagerCallback managercb;
+        bool pause = false;
 
         AnalyzerService.AnalyzerClient client;
 
@@ -45,11 +47,19 @@ namespace Manager.WindowsService
 
         public void StartCollectors(string[] devicesNames, string[] sources, bool net = true, string filter = "", bool host = true, bool mode = true)
         {
-            if (net)
-                StartNetDataCollector(devicesNames, filter, mode);
+            if (pause)
+            {
+                RestartCollectors();
+            }
+            else
+            {
+                if (net)
+                    StartNetDataCollector(devicesNames, filter, mode);
 
-            if (host)
-                StartHostDataCollector(sources, mode);
+                if (host)
+                    StartHostDataCollector(sources, mode);
+
+            }
         }
 
         public void StartNetDataCollector(string[] devicesNames, string filter, bool mode)
@@ -125,22 +135,7 @@ namespace Manager.WindowsService
             }
 
             hostDataCollector.Clear();
-        }
-
-        public void Pause(List<string> nCollectors, List<string> hCollectors)
-        {
-            foreach (string ndCollector in nCollectors)
-            {
-                if (netDataCollector.ContainsKey(ndCollector))
-                    netDataCollector[ndCollector].Stop();
-            }
-
-            foreach (string hdCollector in hCollectors)
-            {
-                if (hostDataCollector.ContainsKey(hdCollector))
-                    hostDataCollector[hdCollector].Stop();
-            }
-        }
+        }    
 
         public string[] GetDevicesList()
         {
@@ -188,36 +183,55 @@ namespace Manager.WindowsService
 
         public void UpdateNeuralNetwork()
         {
-            PauseHostDataCollector();
-            PauseNetDataCollector();
+            Pause();
             client.ChangeNN();
-            RestartHostDataCollector();
-            RestartNetDataCollector();
+            RestartCollectors();
         }
 
         private void PauseHostDataCollector()
         {
-
+            foreach (var hdCollector in hostDataCollector.Values)
+            {
+                hdCollector.SetPause();
+            }
         }
 
         private void PauseNetDataCollector()
         {
+            foreach (var ndCollector in netDataCollector.Values)
+            {
+                ndCollector.SetPause();
+            }
+        }
 
+        public void Pause()
+        {
+            pause = true;
+            PauseHostDataCollector();
+            PauseNetDataCollector();           
         }
 
         private void RestartHostDataCollector()
         {
-
+            foreach (var hdCollector in hostDataCollector.Values)
+            {
+                hdCollector.ResetPause();
+            }
         }
 
         private void RestartNetDataCollector()
         {
-
+            foreach (var ndCollector in netDataCollector.Values)
+            {
+                ndCollector.ResetPause();
+            }
         }
 
         public void RestartCollectors()
         {
-
+            pause = false;
+            RestartHostDataCollector();
+            RestartNetDataCollector();
         }
     }
 }

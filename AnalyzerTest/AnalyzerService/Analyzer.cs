@@ -2,6 +2,7 @@
 using AnalyzerServ.Contract;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -18,9 +19,9 @@ namespace AnalyzerService
         LogClassifier hostClassifier;
         SimpleClassifierNN temporaryNetClassifier;
         LogClassifier temporaryHostClassifier;
-        string networkFile = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\netSave.txt";
-        string logClassifierFile = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\logSave.txt";
-        string dictionaryFile = @"E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\SecurityTraining.txt";
+        string networkFile = @"E:\Диплом\WorkingDirectory\netSave.txt";
+        string logClassifierFile = @"E:\Диплом\WorkingDirectory\logSave.txt";
+        string dictionaryFile = @"E:\Диплом\WorkingDirectory\SecurityTraining.txt";
         string temporaryGoal;
         Queue<string[]> netQueue;
         Queue<string[]> hostQueue;
@@ -129,6 +130,12 @@ namespace AnalyzerService
             {
                 temporaryNetClassifier = null;
                 var trainingData = Utilities.ReadNetTrainingFile(trainingFileName, ref trainingSamples, ref countFeatures);
+
+                if(trainingData == null)
+                {
+                    return null;
+                }
+
                 temporaryNetClassifier = new SimpleClassifierNN(trainingData, countFeatures, trainingSamples, neuronCountInHiddenLayer, epochCount);
                 var trainingResult = temporaryNetClassifier.Train();
                 var testData = Utilities.ReadNetTestFile(testFileName, ref testSamples);

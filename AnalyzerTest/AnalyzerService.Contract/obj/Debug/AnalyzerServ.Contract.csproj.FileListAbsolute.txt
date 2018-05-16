@@ -20,4 +20,3 @@ E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\bin\Debu
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\bin\Debug\AnalyzerServ.Contract.pdb
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.dll
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.pdb
-E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService.Contract\obj\Debug\AnalyzerServ.Contract.csprojResolveAssemblyReference.cache

@@ -231,3 +231,100 @@ System.Security.SecurityException: Источник не найден, но не
    logtoconsole = 
    logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
    assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Выполняется удаление сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Выполняется удаление источника EventLog AnalyzerWindowsService.
+Выполняется удаление службы AnalyzerWindowsService из системы...
+Служба AnalyzerWindowsService успешно удалена из системы.
+Выполняется установка сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Устанавливается служба AnalyzerWindowsService...
+Служба AnalyzerWindowsService успешно установлена.
+Создается исходный EventLog AnalyzerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Выполняется установка сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Устанавливается служба AnalyzerWindowsService...
+Создается исходный EventLog AnalyzerWindowsService в журнале Application...
+Выполняется откат для сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Восстанавливается исходное состояние журнала событий для источника AnalyzerWindowsService.
+Выполняется удаление сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Выполняется удаление источника EventLog AnalyzerWindowsService.
+Выполняется удаление службы AnalyzerWindowsService из системы...
+Служба AnalyzerWindowsService успешно удалена из системы.
+Выполняется установка сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Устанавливается служба AnalyzerWindowsService...
+Служба AnalyzerWindowsService успешно установлена.
+Создается исходный EventLog AnalyzerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Выполняется удаление сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Выполняется удаление источника EventLog AnalyzerWindowsService.
+Выполняется удаление службы AnalyzerWindowsService из системы...
+Служба AnalyzerWindowsService успешно удалена из системы.
+Выполняется установка сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Устанавливается служба AnalyzerWindowsService...
+Служба AnalyzerWindowsService успешно установлена.
+Создается исходный EventLog AnalyzerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Выполняется удаление сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Выполняется удаление источника EventLog AnalyzerWindowsService.
+Выполняется удаление службы AnalyzerWindowsService из системы...
+Служба AnalyzerWindowsService успешно удалена из системы.
+Выполняется установка сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe
+Устанавливается служба AnalyzerWindowsService...
+Служба AnalyzerWindowsService успешно установлена.
+Создается исходный EventLog AnalyzerWindowsService в журнале Application...
+Выполняется фиксация сборки 'E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   logfile = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.InstallLog
+   assemblypath = E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerService\bin\Debug\AnalyzerService.exe

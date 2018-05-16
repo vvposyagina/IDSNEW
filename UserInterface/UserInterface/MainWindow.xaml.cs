@@ -35,6 +35,7 @@ namespace UserInterface
         List<NNItem> ExistingNN;
         string goal = "";
         ClientCallback callback;
+        bool pause;
 
         public MainWindow()
         {
@@ -48,6 +49,7 @@ namespace UserInterface
             neuralNetworkData = new List<string>();
             goal = "";
             ExistingNN = new List<NNItem>();
+            pause = false;
 
             try
             {
@@ -105,42 +107,50 @@ namespace UserInterface
 
         private void bStartScanning_Click(object sender, RoutedEventArgs e)
         {
-            if (cbHost.IsChecked == true || cbNet.IsChecked == true)
+            if (!pause)
             {
-                if ((cbHost.IsChecked == true && (cbApplication.IsChecked == true || cbSystem.IsChecked == true || cbSecurity.IsChecked == true)) || cbHost.IsChecked == false)
+                if (cbHost.IsChecked == true || cbNet.IsChecked == true)
                 {
-                    if(cbNet.IsChecked == true && Devices.Count == 0)
+                    if ((cbHost.IsChecked == true && (cbApplication.IsChecked == true || cbSystem.IsChecked == true || cbSecurity.IsChecked == true)) || cbHost.IsChecked == false)
                     {
-                        MessageBox.Show("Выберите сетевые устройства");
+                        if (cbNet.IsChecked == true && Devices.Count == 0)
+                        {
+                            MessageBox.Show("Выберите сетевые устройства");
+                        }
+                        else
+                        {
+                            cbHost.IsEnabled = false;
+                            cbNet.IsEnabled = false;
+                            cbSaveToFile.IsEnabled = false;
+                            bAddFilter.IsEnabled = false;
+                            bDefineLogSource.IsEnabled = false;
+                            string[] hostSources = Sources.ToArray();
+                            string[] netDevices = Devices.ToArray();
+
+                            bool mode = cbSaveToFile.IsChecked == true ? true : false;
+                            bool host = cbHost.IsChecked == true ? true : false;
+                            bool net = cbNet.IsChecked == true ? true : false;
+
+                            client.StartCollectors(netDevices, hostSources, net, Filter, host, mode);
+                            bStartScanning.IsEnabled = false;
+                            bStopScanning.IsEnabled = true;
+                            bPauseScanning.IsEnabled = true;
+                        }
                     }
                     else
                     {
-                        cbHost.IsEnabled = false;
-                        cbNet.IsEnabled = false;
-                        cbSaveToFile.IsEnabled = false;
-                        bAddFilter.IsEnabled = false;
-                        bDefineLogSource.IsEnabled = false;
-                        string[] hostSources = Sources.ToArray();
-                        string[] netDevices = Devices.ToArray();
-
-                        bool mode = cbSaveToFile.IsChecked == true ? true : false;
-                        bool host = cbHost.IsChecked == true ? true : false;
-                        bool net = cbNet.IsChecked == true ? true : false;
-
-                        client.StartCollectors(netDevices, hostSources, net, Filter, host, mode);
-                        bStartScanning.IsEnabled = false;
-                        bStopScanning.IsEnabled = true;
-                        bPauseScanning.IsEnabled = true;
+                        MessageBox.Show("Выберите журналы событий");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Выберите журналы событий");
+                    MessageBox.Show("Выберите области мониторинга");
                 }
             }
             else
-            {
-                MessageBox.Show("Выберите области мониторинга");
+            { 
+                pause = false;
+                client.StartCollectors(null, null, false, "", false, false);
             }
         }
 
@@ -367,7 +377,15 @@ namespace UserInterface
                         int epochCount = Convert.ToInt32(tbEpochCount.Text);
                         int neuronCountInHiddenLayer = Convert.ToInt32(tbNeuronCountInHiddenLayer.Text);
                         double[] result = client.RequestRetraining(trainingFileName, testFileName, goal, epochCount, neuronCountInHiddenLayer);
-                        GetResultRetraining(result);
+
+                        if (result == null)
+                        {
+                            MessageBox.Show("На основании исходных данных нейросеть построить не удалось. Проверьте корректность обучающей и тестовой выборок");
+                        }
+                        else
+                        {
+                            GetResultRetraining(result);
+                        }
                     }
                     else
                     {
@@ -423,12 +441,19 @@ namespace UserInterface
             goal = "";
             testFileName = "";
             trainingFileName = "";
+            tbNeuronCountInHiddenLayer.Text = "";
+            tbEpochCount.Text = "";
+            tbTestFileName.Text = "";
+            tbTrainingFileName.Text = "";
+            lbAboutNewNetwork.Items.Clear();
         }
 
         private void bPauseScanning_Click(object sender, RoutedEventArgs e)
         {
             bPauseScanning.IsEnabled = false;
             bStartScanning.IsEnabled = true;
+            client.Pause();
+            pause = true;
         }
     }
 }

@@ -34,10 +34,10 @@ namespace UserInterface.ManagerService {
         System.Threading.Tasks.Task StopAsync();
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsInitiating=false, Action="http://tempuri.org/IManagerService/Pause")]
-        void Pause(string[] nCollectors, string[] hCollectors);
+        void Pause();
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsInitiating=false, Action="http://tempuri.org/IManagerService/Pause")]
-        System.Threading.Tasks.Task PauseAsync(string[] nCollectors, string[] hCollectors);
+        System.Threading.Tasks.Task PauseAsync();
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsInitiating=false, Action="http://tempuri.org/IManagerService/StartNetDataCollector")]
         void StartNetDataCollector(string[] devicesNames, string filter, bool mode);
@@ -186,12 +186,12 @@ namespace UserInterface.ManagerService {
             return base.Channel.StopAsync();
         }
         
-        public void Pause(string[] nCollectors, string[] hCollectors) {
-            base.Channel.Pause(nCollectors, hCollectors);
+        public void Pause() {
+            base.Channel.Pause();
         }
         
-        public System.Threading.Tasks.Task PauseAsync(string[] nCollectors, string[] hCollectors) {
-            return base.Channel.PauseAsync(nCollectors, hCollectors);
+        public System.Threading.Tasks.Task PauseAsync() {
+            return base.Channel.PauseAsync();
         }
         
         public void StartNetDataCollector(string[] devicesNames, string filter, bool mode) {
