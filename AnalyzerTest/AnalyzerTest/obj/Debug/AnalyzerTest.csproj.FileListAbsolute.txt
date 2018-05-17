@@ -160,7 +160,6 @@ E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\AnalyzerSe
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\ZedGraph.dll
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\AnalyzerServ.Contract.dll
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\AnalyzerLibrary.pdb
-E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\AnalyzerService.pdb
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\Accord.xml
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\Accord.Controls.xml
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\Accord.Genetic.xml
@@ -185,3 +184,4 @@ E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\tr\ZedGrap
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\zh-cn\ZedGraph.resources.dll
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\zh-tw\ZedGraph.resources.dll
 E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\obj\Debug\AnalyzerTest.csprojResolveAssemblyReference.cache
+E:\Диплом\Новая\IDSNEW\AnalyzerTest\AnalyzerTest\bin\Debug\AnalyzerService.pdb

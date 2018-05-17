@@ -14,7 +14,7 @@ namespace HostDataCollector
         public DateTime EventsDate { get; private set; }
         public DateTime EntrysDate { get; private set; }
         public double TimeBtwGW { get; private set; }
-        public long EventID { get; private set; }
+        public long EventID { get; set; }
         public string Task { get; private set; }
         public string EventData { get; private set; }
 
@@ -30,6 +30,16 @@ namespace HostDataCollector
             EventID = entry.InstanceId;
             Task = entry.Category;
             EventData = entry.Message;
+        }
+
+        public LogMessage(LogMessage entry)
+        {
+            Level = entry.Level;
+            Provider = entry.Provider;
+            TimeBtwGW = entry.TimeBtwGW;
+            EventID = entry.EventID;
+            Task = entry.Task;
+            EventData = entry.EventData;
         }
         public override string ToString()
         {

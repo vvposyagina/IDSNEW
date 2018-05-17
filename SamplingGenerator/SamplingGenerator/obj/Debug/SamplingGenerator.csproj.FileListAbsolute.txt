@@ -13,3 +13,6 @@ E:\Прога\IDSW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerat
 E:\Диплом\Новая\IDSNEW\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.exe.config
 E:\Диплом\Новая\IDSNEW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.exe
 E:\Диплом\Новая\IDSNEW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.pdb
+E:\Диплом\Новая\IDSNEW\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.exe
+E:\Диплом\Новая\IDSNEW\SamplingGenerator\SamplingGenerator\bin\Debug\SamplingGenerator.pdb
+E:\Диплом\Новая\IDSNEW\SamplingGenerator\SamplingGenerator\obj\Debug\SamplingGenerator.csprojResolveAssemblyReference.cache

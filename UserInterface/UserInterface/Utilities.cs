@@ -66,7 +66,7 @@ namespace UserInterface
             info.Append(String.Format("EventID: {0}\r\n", data[1]));
             info.Append(String.Format("Provider: {0}\r\n", data[2]));
             info.Append(String.Format("Data:\r\n"));
-            info.Append(ParseNetData(data[3]));
+            info.Append(data[3]);
 
             return info.ToString();
         }

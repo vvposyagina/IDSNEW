@@ -12,7 +12,7 @@ namespace HostDataCollector
 {
     public class HostCollector : Collector
     {
-        public const int PACKETS_COUNT_CONSTRAINT = 1;
+        public const int PACKETS_COUNT_CONSTRAINT = 2;
         object locker = new object();        
         EventLog sourceLog;
 
@@ -23,7 +23,7 @@ namespace HostDataCollector
         public bool SavingInFile { get; set; }
 
         public event ProccesBufffer queueIsFull;
-
+    
         public void Initialize(string source, bool savingfile)
         {
             Pause = false;
@@ -33,6 +33,7 @@ namespace HostDataCollector
             Source = source;
             SavingInFile = savingfile;
             queueIsFull = null;
+            rand = new Random();
 
             if (SavingInFile)
             {
@@ -68,6 +69,15 @@ namespace HostDataCollector
         {            
             LogMessage newMessage = new LogMessage(e.Entry);
             MessagesBuffer.Enqueue(newMessage);
+
+            //int randomNumber = rand.Next(2);
+
+            //if (randomNumber == 1)
+            //{
+            //    MessagesBuffer.Enqueue(SuspiciousLogGenerator.GenerateSample(newMessage));
+            //}
+
+            MessagesBuffer.Enqueue(SuspiciousLogGenerator.GenerateSample(newMessage));
 
             if(MessagesBuffer.Count >= PACKETS_COUNT_CONSTRAINT && !Pause)
             {

@@ -22,6 +22,7 @@ namespace AnalyzerService
         string networkFile = @"E:\Диплом\WorkingDirectory\netSave.txt";
         string logClassifierFile = @"E:\Диплом\WorkingDirectory\logSave.txt";
         string dictionaryFile = @"E:\Диплом\WorkingDirectory\SecurityTraining.txt";
+        string rulesFile = @"E:\Диплом\WorkingDirectory\RulesFile.txt";
         string temporaryGoal;
         Queue<string[]> netQueue;
         Queue<string[]> hostQueue;
@@ -34,7 +35,8 @@ namespace AnalyzerService
             hostQueue = new Queue<string[]>();
             temporaryGoal = "";
             netClassifier = new SimpleClassifierNN(networkFile);
-            hostClassifier = new LogClassifier(logClassifierFile, dictionaryFile);
+            //hostClassifier = new LogClassifier(logClassifierFile, dictionaryFile);
+            hostClassifier = new LogClassifier(rulesFile);
             ThreadForNetAnalyzing = new Thread(new ParameterizedThreadStart(NetAnalyze));
             ThreadForHostAnalyzing = new Thread(new ParameterizedThreadStart(HostAnalyze));
             ThreadForHostAnalyzing.Start(OperationContext.Current);
@@ -102,7 +104,10 @@ namespace AnalyzerService
                     {
                         LogEntry newEntry = new LogEntry(str, DELIMETER);
 
-                        if (!hostClassifier.Analyze(newEntry))
+                        //if (!hostClassifier.Analyze(newEntry))
+                        //    context.GetCallbackChannel<IAnalyzerCallback>().GenerateHostWarning(newEntry.ToStringArray());
+
+                        if(!hostClassifier.AnalysisOfSignatures(newEntry))
                             context.GetCallbackChannel<IAnalyzerCallback>().GenerateHostWarning(newEntry.ToStringArray());
                     }
                 }

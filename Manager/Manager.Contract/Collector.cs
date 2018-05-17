@@ -14,6 +14,8 @@ namespace Manager.Contract
 
         public string FileName { get; set; }
 
+        protected Random rand;
+
         protected void SendBufferToManager(string[] data)
         {
             if (sendToManager != null)

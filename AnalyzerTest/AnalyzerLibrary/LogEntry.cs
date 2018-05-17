@@ -23,10 +23,10 @@ namespace AnalyzerLibrary
         public LogEntry(string entry, char delimeter)
         {
             string[] entryarr = entry.Split(delimeter);
-            Level = entryarr[0];
-            Provider = entryarr[2];
+            Level = entryarr[1];
+            Provider = entryarr[0];
             //TimeBtwGW = Convert.ToDouble(entryarr[1]);
-            EventID = Convert.ToInt64(entryarr[3]);
+            EventID = Convert.ToInt64(entryarr[2]);
             Task = entryarr[3];
             Data = entryarr[4];
             EventData = HandleMessage(entryarr[4]).Split(' ');

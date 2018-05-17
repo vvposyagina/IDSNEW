@@ -16,4 +16,3 @@ E:\Диплом\Новая\IDSNEW\Manager\Manager.Contract\bin\Debug\Manager.Con
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Contract\bin\Debug\Manager.Contract.pdb
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Contract\obj\Debug\Manager.Contract.dll
 E:\Диплом\Новая\IDSNEW\Manager\Manager.Contract\obj\Debug\Manager.Contract.pdb
-E:\Диплом\Новая\IDSNEW\Manager\Manager.Contract\obj\Debug\Manager.Contract.csprojResolveAssemblyReference.cache

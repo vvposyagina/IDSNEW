@@ -13,8 +13,7 @@ namespace NetDataCollector
 {
     public class NetCollector : Collector
     {        
-        public const int PACKETS_COUNT_CONSTRAINT = 50;
-        Random rand;
+        public const int PACKETS_COUNT_CONSTRAINT = 50;        
 
         public string Filter { get; set; }
 
@@ -145,14 +144,14 @@ namespace NetDataCollector
                             continue;
                         case PacketCommunicatorReceiveResult.Ok:
                             PacketBuffer.Enqueue((new CustomPacket(packet)).ToString());
-                            PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
+                            //PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
 
-                            //int randomNumber = rand.Next(1000);
+                            int randomNumber = rand.Next(10);
 
-                            //if (randomNumber % 50 == 0)
-                            //{
-                            //    PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
-                            //}
+                            if (randomNumber % 5 == 0)
+                            {
+                                PacketBuffer.Enqueue(SuspiciousPacketGenerator.GenerateSample(36, "0", rand, false));
+                            }
                             break;
                         default:
                             throw new InvalidOperationException("The result " + result + " should never be reached here");

@@ -21,7 +21,9 @@ namespace AnalyzerLibrary
         public TimeSpan TrainingTime { get; set; }
 
         SimpleClassifierNN classifier;
+        List<Tuple<HashSet<long>, HashSet<string>>> SignatureDictionary;
         //LogisticRegression reg;
+
 
         public LogClassifier(string fileName, int countLayers, int countEpoch)
         {
@@ -55,6 +57,11 @@ namespace AnalyzerLibrary
                 Error = trainingResult.Item1;
                 TrainingTime = trainingResult.Item2;
             }
+        }
+
+        public LogClassifier(string fileName)
+        {
+            SignatureDictionary = Utilities.GetSignaturesDictionary(fileName);
         }
 
         public void SaveClassifier(string fileName)
@@ -109,6 +116,32 @@ namespace AnalyzerLibrary
 
             //bool c1 = reg.Decide(log);
             //return c1;
+        }
+
+
+        public bool AnalysisOfSignatures(LogEntry entry)
+        {
+            bool flag = false;
+            foreach(var codes in SignatureDictionary)
+            {
+                flag = false;
+                if(codes.Item1.Contains(entry.EventID))
+                {                  
+                    foreach(var word in codes.Item2)
+                    {
+                        if(entry.Data.Contains(word))
+                        {
+                            flag = true;
+                            break;
+                        }
+                    }
+
+                    if (!flag)
+                        return flag;
+                }
+            }
+
+            return true;
         }
     }
 }

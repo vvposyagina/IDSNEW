@@ -4,6 +4,7 @@ using System.Data.Common;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Manager.DataAccess
@@ -75,6 +76,7 @@ namespace Manager.DataAccess
         public void AddHostLog(string[] data)
         {
             connection.Open();
+            data[3] = data[3].Replace("\'", "");
             SQLiteCommand commandInsert = new SQLiteCommand(String.Format("INSERT INTO hostlog (date, event_id, provider, data, threat) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')", data[0], data[1], data[2], data[3], data[4]), connection);
             SQLiteDataReader reader = commandInsert.ExecuteReader();
             connection.Close();

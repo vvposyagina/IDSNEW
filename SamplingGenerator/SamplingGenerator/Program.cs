@@ -67,30 +67,31 @@ namespace SamplingGenerator
 
         static void Main(string[] args)
         {
-            string FileDirectory = @"E:\Диплом\Прога\SamplingGenerator";
-            DirectoryInfo directory = new DirectoryInfo(FileDirectory);
-            Random rand = new Random(unchecked((int)(DateTime.Now.Ticks)));
+            string str = "'gh'";
+            str.Replace("\'", "");
+            //string FileDirectory = @"E:\Диплом\Прога\SamplingGenerator";
+            //DirectoryInfo directory = new DirectoryInfo(FileDirectory);
+            //Random rand = new Random(unchecked((int)(DateTime.Now.Ticks)));
 
-            if (!directory.Exists)
-            {
-                directory.Create();
-            }
+            //if (!directory.Exists)
+            //{
+            //    directory.Create();
+            //}
 
-            string FileName = "asmpling.txt";
+            //string FileName = "asmpling.txt";
 
-            string path = String.Format(@"{0}//{1}", FileDirectory, FileName);
+            //string path = String.Format(@"{0}//{1}", FileDirectory, FileName);
 
-            int n = 100, length = 36;
+            //int n = 100, length = 36;
 
-            using (StreamWriter writer = File.AppendText(path))
-            {
-                for (int i = 0; i < n; i++)
-                {
-                    string newSample = GenerateSample(length, "0", rand);
-                    writer.WriteLine(newSample.ToString());
-                }
-            }
-            
+            //using (StreamWriter writer = File.AppendText(path))
+            //{
+            //    for (int i = 0; i < n; i++)
+            //    {
+            //        string newSample = GenerateSample(length, "0", rand);
+            //        writer.WriteLine(newSample.ToString());
+            //    }
+            //}
         }
     }
 }
